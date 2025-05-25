@@ -1,0 +1,51 @@
+#header {
+    background-color: black; 
+    color: white; 
+    padding: 10px ; 
+    text-align: center; 
+}
+
+#logo{
+            float: left;
+            vertical-align: middle;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            ;
+    }
+
+#nav{
+            text-align: center;
+            vertical-align: middle;
+            padding-right: 20px;
+            padding: 10px;
+            background-color: grey;
+            /* set a standard height for all divs inside nav */
+            height: 60px;
+}
+
+#section{
+
+            padding: 20px;
+            /* spacing between columns */
+            margin: 10px;
+        
+            background-color: #f0f0f0;
+            /* set a standard height for all divs inside section */
+            height: 400px;          
+            /* split the section in half */
+            display: flex;  
+            /* line between every div */
+            border: 1px solid black;
+
+}
+
+#navRecherche{
+
+    padding: 10px;
+    background-color: grey;
+    cursor: pointer;
+        
+}
+
+
