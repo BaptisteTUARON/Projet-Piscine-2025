@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <title>Terrains - Omnes Immobilier</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- En-tête -->
+        <div id="header">
+            <h1>
+                <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
+                Omnes Immobilier
+            </h1>
+        </div>
+
+        <!-- Navigation -->
+        <div id="nav">
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="toutParcourir.html">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.html">Immobilier Commercial</a>
+                    <a href="terrain.html">Terrain</a>
+                    <a href="appartLouer.html">Appartements à louer</a>
+                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Recherche</a>
+                <div class="dropdown-content search-dropdown">
+                    <form action="recherche.html" method="get">
+                        <input type="text" name="query" placeholder="Tapez votre recherche..." />
+                        <button type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+            <a href="rendezVous.html">Rendez-vous</a>
+            <a href="compte.html">Compte</a>
+        </div>
+
+        <!-- Section principale -->
+        <div id="section">
+
+            <!-- Colonne gauche : liste des terrains -->
+            <div class="col-gauche-immo">
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Terrain constructible – Nantes</h3>
+                        <p><strong>Prix :</strong> 250 000 €</p>
+                        <p><strong>Surface :</strong> 600 m²</p>
+                        <p><strong>Description :</strong> Terrain viabilisé situé en lotissement résidentiel. COS favorable.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Terrain Nantes">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Terrain agricole – Toulouse</h3>
+                        <p><strong>Prix :</strong> 180 000 €</p>
+                        <p><strong>Surface :</strong> 1,2 hectare</p>
+                        <p><strong>Description :</strong> Terrain plat, idéal pour culture bio ou élevage, accessible en tracteur.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Terrain Toulouse">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Parcelle boisée – Grenoble</h3>
+                        <p><strong>Prix :</strong> 90 000 €</p>
+                        <p><strong>Surface :</strong> 1500 m²</p>
+                        <p><strong>Description :</strong> Idéal pour résidence secondaire. Environnement calme, accès par chemin rural.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Terrain Grenoble">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Terrain viabilisé – Bordeaux</h3>
+                        <p><strong>Prix :</strong> 310 000 €</p>
+                        <p><strong>Surface :</strong> 800 m²</p>
+                        <p><strong>Description :</strong> Quartier résidentiel en développement, permis de construire accordé.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Terrain Bordeaux">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Terrain à bâtir – Montpellier</h3>
+                        <p><strong>Prix :</strong> 275 000 €</p>
+                        <p><strong>Surface :</strong> 700 m²</p>
+                        <p><strong>Description :</strong> Proche centre-ville et tramway, belle opportunité d'investissement.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Terrain Montpellier">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne droite : image (carrousel futur) -->
+            <div class="col-carrousel-immobilier">
+                <h2>Carrousel de nos Terrains</h2>
+                <img id="carrousel-immo" src="logo.jpg" alt="Carrousel Terrains">
+            </div>
+
+        </div>
+
+        <!-- Pied de page -->
+        <div id="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Contact</h3>
+                    <p><strong>Omnes Immobilier</strong></p>
+                    <p>12 rue de l'Immobilier, 75000 Paris</p>
+                    <p>Tél : +33 1 23 45 67 89</p>
+                    <p>Email : contact@omnes-immobilier.fr</p>
+                </div>
+                <div class="footer-right">
+                    <h3>Localisation</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=..." height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

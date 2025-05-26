@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg">
+    <title>Omnes Immobilier</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="header">
+            <h1>
+                <img id=logo src="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg"
+                    alt="Omnes Immobilier Logo" width="100" height="100">
+                Omnes Immobilier
+            </h1>
+        </div>
+        <br>
+
+        <div id="nav">
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="toutParcourir.html">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.html">Immobilier Commercial</a>
+                    <a href="terrain.html">Terrain</a>
+                    <a href="appartLouer.html">Appartements à louer</a>
+                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Recherche</a>
+                <div class="dropdown-content search-dropdown">
+                    <form action="recherche.html" method="get">
+                        <input type="text" name="query" placeholder="Tapez votre recherche..." />
+                        <button type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+            <a href="rendezVous.html">Rendez-vous</a>
+            <a href="compte.html">Compte</a>
+        </div>
+
+        <br>
+
+        <div id="section">
+            <!-- Colonne gauche : liste des biens commerciaux -->
+            <div class="col-gauche-immo">
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Bureaux – Paris La Défense</h3>
+                        <p><strong>Prix :</strong> 950 000 €</p>
+                        <p><strong>Superficie :</strong> 150 m²</p>
+                        <p><strong>Pièces :</strong> 5</p>
+                        <p><strong>Description :</strong> Plateaux de bureaux modernes au cœur du quartier d’affaires,
+                            avec
+                            parkings et accès transports.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Bureaux Paris La Défense">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Local commercial – Marseille Vieux-Port</h3>
+                        <p><strong>Prix :</strong> 620 000 €</p>
+                        <p><strong>Superficie :</strong> 90 m²</p>
+                        <p><strong>Pièces :</strong> 2</p>
+                        <p><strong>Description :</strong> Local avec vitrine sur rue piétonne, idéal pour commerce de
+                            proximité.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Local Marseille">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Boutique – Bordeaux Centre</h3>
+                        <p><strong>Prix :</strong> 480 000 €</p>
+                        <p><strong>Superficie :</strong> 70 m²</p>
+                        <p><strong>Pièces :</strong> 1</p>
+                        <p><strong>Description :</strong> Boutique entièrement rénovée, très bon emplacement commercial,
+                            flux piéton élevé.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Boutique Bordeaux">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Entrepôt – Lyon Sud</h3>
+                        <p><strong>Prix :</strong> 800 000 €</p>
+                        <p><strong>Superficie :</strong> 500 m²</p>
+                        <p><strong>Pièces :</strong> 2 grands espaces</p>
+                        <p><strong>Description :</strong> Entrepôt avec quai de chargement, accès poids lourds, idéal
+                            logistique ou stockage.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Entrepôt Lyon">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Restaurant – Lille Centre</h3>
+                        <p><strong>Prix :</strong> 540 000 €</p>
+                        <p><strong>Superficie :</strong> 120 m²</p>
+                        <p><strong>Pièces :</strong> 3</p>
+                        <p><strong>Description :</strong> Restaurant entièrement équipé, licence IV incluse, quartier
+                            animé et touristique.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Restaurant Lille">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Centre médical – Toulouse</h3>
+                        <p><strong>Prix :</strong> 1 050 000 €</p>
+                        <p><strong>Superficie :</strong> 200 m²</p>
+                        <p><strong>Pièces :</strong> 6 cabinets + salle d’attente</p>
+                        <p><strong>Description :</strong> Espace adapté pour activité médicale ou paramédicale, normes
+                            PMR, parking privé.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Centre médical Toulouse">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne droite : image (carrousel futur) -->
+            <div class="col-carrousel-immobilier">
+                <h2>Carrousel de nos Biens Commerciaux</h2>
+                <img id="carrousel-immo" src="logo.jpg" alt="Carrousel Commercial">
+            </div>
+        </div>
+
+
+
+        <div id="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Contact</h3>
+                    <p><strong>Omnes Immobilier</strong></p>
+                    <p>12 rue de l'Immobilier, 75000 Paris</p>
+                    <p>Tél : +33 1 23 45 67 89</p>
+                    <p>Email : contact@omnes-immobilier.fr</p>
+                </div>
+
+                <div class="footer-right">
+                    <h3>Localisation</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr"
+                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

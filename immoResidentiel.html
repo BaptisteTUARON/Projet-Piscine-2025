@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg">
+    <title>Omnes Immobilier</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="header">
+            <h1>
+                <img id=logo src="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg"
+                    alt="Omnes Immobilier Logo" width="100" height="100">
+                Omnes Immobilier
+            </h1>
+        </div>
+        <br>
+
+        <div id="nav">
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="toutParcourir.html">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.html">Immobilier Commercial</a>
+                    <a href="terrain.html">Terrain</a>
+                    <a href="appartLouer.html">Appartements à louer</a>
+                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Recherche</a>
+                <div class="dropdown-content search-dropdown">
+                    <form action="recherche.html" method="get">
+                        <input type="text" name="query" placeholder="Tapez votre recherche..." />
+                        <button type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+            <a href="rendezVous.html">Rendez-vous</a>
+            <a href="compte.html">Compte</a>
+        </div>
+
+        <br>
+
+        <div id="section">
+            <!-- Colonne gauche : liste des biens -->
+            <div class="col-gauche-immo">
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Appartement T3 – Paris 15</h3>
+                        <p><strong>Prix :</strong> 450 000 €</p>
+                        <p><strong>Superficie :</strong> 75 m²</p>
+                        <p><strong>Chambres :</strong> 2</p>
+                        <p><strong>Description :</strong> Bel appartement lumineux dans un immeuble récent, proche des
+                            commerces.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Appartement Paris">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Maison – Marseille</h3>
+                        <p><strong>Prix :</strong> 550 000 €</p>
+                        <p><strong>Superficie :</strong> 110 m²</p>
+                        <p><strong>Chambres :</strong> 3</p>
+                        <p><strong>Description :</strong> Maison avec terrasse et jardin, située en périphérie calme.
+                        </p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Maison Marseille">
+                    </div>
+                </div>
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Appartement T2 – Bordeaux</h3>
+                        <p><strong>Prix :</strong> 320 000 €</p>
+                        <p><strong>Superficie :</strong> 60 m²</p>
+                        <p><strong>Chambres :</strong> 1</p>
+                        <p><strong>Description :</strong> Appartement moderne situé dans le centre historique, proche du
+                            tramway.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Appartement Bordeaux">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Villa – Nice</h3>
+                        <p><strong>Prix :</strong> 1 200 000 €</p>
+                        <p><strong>Superficie :</strong> 180 m²</p>
+                        <p><strong>Chambres :</strong> 4</p>
+                        <p><strong>Description :</strong> Villa avec vue mer, piscine et garage, située sur les hauteurs
+                            de Nice.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Villa Nice">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Studio – Lille</h3>
+                        <p><strong>Prix :</strong> 150 000 €</p>
+                        <p><strong>Superficie :</strong> 30 m²</p>
+                        <p><strong>Chambres :</strong> 1</p>
+                        <p><strong>Description :</strong> Studio idéal pour étudiant, situé à proximité de l’université
+                            Lille 1.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Studio Lille">
+                    </div>
+                </div>
+
+                <div class="appartement-immo">
+                    <div class="infos">
+                        <h3>Loft – Lyon Confluence</h3>
+                        <p><strong>Prix :</strong> 720 000 €</p>
+                        <p><strong>Superficie :</strong> 100 m²</p>
+                        <p><strong>Chambres :</strong> 2</p>
+                        <p><strong>Description :</strong> Loft design dans un immeuble industriel réhabilité, quartier
+                            très recherché.</p>
+                    </div>
+                    <div class="visuel">
+                        <img src="logo.jpg" alt="Loft Lyon">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Colonne droite : image (carrousel futur) -->
+            <div class="col-carrousel-immobilier">
+                <h2>Carrousel de nos Propriétés Résidentielles</h2>
+                <img id="carrousel-immo" src="logo.jpg" alt="Carrousel Résidentiel">
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Contact</h3>
+                    <p><strong>Omnes Immobilier</strong></p>
+                    <p>12 rue de l'Immobilier, 75000 Paris</p>
+                    <p>Tél : +33 1 23 45 67 89</p>
+                    <p>Email : contact@omnes-immobilier.fr</p>
+                </div>
+
+                <div class="footer-right">
+                    <h3>Localisation</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr"
+                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

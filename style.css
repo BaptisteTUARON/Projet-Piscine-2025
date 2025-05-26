@@ -48,59 +48,8 @@ body {
 }
 
 #nav a:hover {
-    background-color: #d0d0d0;
+    background-color: lightgrey;
 }
-
-/* Section principale */
-#section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid black;
-    gap: 20px;
-    height: auto;
-}
-
-/* Colonne gauche : image */
-#section > div.image-col {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px dashed grey;
-}
-
-#section > div.image-col img {
-    max-width: 90%;
-    max-height: 300px;
-    border: 1px solid black;
-    
-}
-
-/* Colonne droite : contenu texte */
-#text-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-left: 1px dashed grey;
-    padding-left: 20px;
-    margin: 20px;
-}
-
-/* Pied de page */
-#footer {
-    height: 80px;
-    background-color: #eeeeee;
-    border: 1px solid black;
-    margin-top: 20px;
-    margin: 10px;
-}
-
-
 
 /* Uniformise tous les boutons du nav */
 .nav-item {
@@ -113,10 +62,6 @@ body {
     align-items: center;
     height: 40px;
     box-sizing: border-box;
-}
-
-.nav-item:hover {
-    background-color: #d0d0d0;
 }
 
 /* Dropdown menu */
@@ -177,13 +122,144 @@ body {
 }
 
 
-/* Pied de page */
+
+/* Section principale */
+#section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    gap: 20px;
+    height: auto;
+}
+
+
+/* Colonne de gauche dans index.html : l'image dans la colonne de gauche */
+#col-image-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dashed black;
+    padding-right: 20px;
+}
+
+
+
+/* Colonne droite : contenu texte (REMPLACER PAR LE CARROUSEL PLUS TARD) */
+#col-carrousel-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin: 20px;
+}
+
+#col-carrousel-toutParcourir{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin: 20px;
+
+}
+
+/*Colonne de droite dans toutParcourir.html : les images dans la colonne de droite : deux par ligne */
+#col-images-toutParcourir {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px dashed black;
+    padding: 20px;
+    width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    max-height: 400px;
+
+}
+
+.bien-toutParcourir{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+#col-carrousel-immobilier {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin: 20px;
+}
+
+
+
+
+.imgappart {
+    border-radius: 8px;
+    margin-top: 10px;
+    /*Mettre l'image à droite du texte dans la section principale*/
+}
+
+#lignes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.appartement-immo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.appartement-immo img {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+/* Colonne gauche scrollable */
+.col-gauche-immo {
+    flex: 2;
+    min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#carrousel-immo {
+    width: 350px;
+    align-items: center;
+    height: 300px;
+    border: 1px solid black;
+}
+
+
+
+
+
+/* CSS DU FOOTER */
+
 #footer {
     background-color: #eeeeee;
     border-top: 1px solid black;
     padding: 20px;
     margin-top: 20px;
     height: auto;
+    background-color: #eeeeee;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin: 10px;
 }
 
 .footer-content {
@@ -219,5 +295,4 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
 }
-
 
