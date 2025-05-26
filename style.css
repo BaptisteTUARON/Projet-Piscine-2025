@@ -1,51 +1,223 @@
+/* Style général */
+body {
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* En-tête */
 #header {
-    background-color: black; 
-    color: white; 
-    padding: 10px ; 
-    text-align: center; 
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+    border: 3px grey solid;
 }
 
-#logo{
-            float: left;
-            vertical-align: middle;
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            ;
-    }
-
-#nav{
-            text-align: center;
-            vertical-align: middle;
-            padding-right: 20px;
-            padding: 10px;
-            background-color: grey;
-            /* set a standard height for all divs inside nav */
-            height: 60px;
+#logo {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
 }
 
-#section{
 
-            padding: 20px;
-            /* spacing between columns */
-            margin: 10px;
-        
-            background-color: #f0f0f0;
-            /* set a standard height for all divs inside section */
-            height: 400px;          
-            /* split the section in half */
-            display: flex;  
-            /* line between every div */
-            border: 1px solid black;
-
-}
-
-#navRecherche{
-
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
     padding: 10px;
-    background-color: grey;
+    gap: 30px;
+    margin: 10px;
+    border: 1px solid black;
+    
+}
+
+#nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #e0e0e0;
+}
+
+#nav a:hover {
+    background-color: #d0d0d0;
+}
+
+/* Section principale */
+#section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    gap: 20px;
+    height: auto;
+}
+
+/* Colonne gauche : image */
+#section > div.image-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dashed grey;
+}
+
+#section > div.image-col img {
+    max-width: 90%;
+    max-height: 300px;
+    border: 1px solid black;
+    
+}
+
+/* Colonne droite : contenu texte */
+#text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-left: 1px dashed grey;
+    padding-left: 20px;
+    margin: 20px;
+}
+
+/* Pied de page */
+#footer {
+    height: 80px;
+    background-color: #eeeeee;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin: 10px;
+}
+
+
+
+/* Uniformise tous les boutons du nav */
+.nav-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.nav-item:hover {
+    background-color: #d0d0d0;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    border: 1px solid black;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown spécial pour la recherche */
+.search-dropdown form {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+}
+
+.search-dropdown input[type="text"] {
+    padding: 5px;
+    width: 160px;
+    border: 1px solid #999;
+}
+
+.search-dropdown button {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: 1px solid #999;
     cursor: pointer;
-        
+}
+
+.search-dropdown button:hover {
+    background-color: #bbb;
+}
+
+
+/* Pied de page */
+#footer {
+    background-color: #eeeeee;
+    border-top: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Partie gauche : contact */
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-left p {
+    margin: 6px 0;
+}
+
+/* Partie droite : Google Maps */
+.footer-right {
+    flex: 2;
+}
+
+.footer-right iframe {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 
