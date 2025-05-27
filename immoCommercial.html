@@ -8,9 +8,8 @@
     <link rel="icon" type="image/x-icon" href="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg">
     <title>Omnes Immobilier</title>
 
-    <style>
-
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="script.js"></script>
 
 </head>
 
@@ -39,7 +38,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">Recherche</a>
+                <a href="recherche.html">Recherche</a>
                 <div class="dropdown-content search-dropdown">
                     <form action="recherche.html" method="get">
                         <input type="text" name="query" placeholder="Tapez votre recherche..." />
@@ -47,7 +46,7 @@
                     </form>
                 </div>
             </div>
-            <a href="rendezVous.html">Rendez-vous</a>
+            <a href="prendreRDV.html">Rendez-vous</a>
             <a href="compte.html">Compte</a>
         </div>
 
@@ -145,7 +144,15 @@
             <!-- Colonne droite : image (carrousel futur) -->
             <div class="col-carrousel-immobilier">
                 <h2>Carrousel de nos Biens Commerciaux</h2>
-                <img id="carrousel-immo" src="logo.jpg" alt="Carrousel Commercial">
+                <div class="carrousel-container">
+                    <img src="image1.jpeg" alt="Image 1" width="300" height="200">
+                    <img src="logo.jpg" alt="Image 2" width="300" height="200">
+                </div>
+
+                <div class="controls">
+                    <button class="prev">←</button>
+                    <button class="next">→</button>
+                </div>
             </div>
         </div>
 

@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="logo.jpg">
-    <title>Contact - Omnes Immobilier</title>
-    <link rel="icon" type="image/x-icon" href="logo.jpg">
-    <title>Omnes Immobilier : Contact</title>
+    <title>Omnes Immobilier</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
 </head>
 
 <body>
     <div id="wrapper">
 
-        <!-- En-tête -->
         <div id="header">
             <h1>
-                <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
+                <img id=logo src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
                 Omnes Immobilier
             </h1>
         </div>
+        <br>
 
-        <!-- Navigation -->
         <div id="nav">
             <a href="index.html">Accueil</a>
             <div class="dropdown">
@@ -44,44 +46,84 @@
                     </form>
                 </div>
             </div>
-            <a href="prendreRDV .html">Rendez-vous</a>
+            <a href="prendreRDV.html">Rendez-vous</a>
             <a href="compte.html">Compte</a>
         </div>
 
-        <!-- Section principale -->
-        <div id="section">
-            <div id="text-col">
-                <h2>Contactez-nous</h2>
-                <p>Pour toute demande d'information, de visite ou de collaboration, merci de remplir le formulaire
-                    ci-dessous :</p>
+        <br>
+        <div id="section"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <h1 style="text-align: center;">Prendre un rendez-vous avec un de nos conseillers</h1>
+            <table id="emploiDuTemps">
 
-                <form action="#" method="post"
-                    style="display: flex; flex-direction: column; gap: 10px; max-width: 500px;">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required>
+                <tr>
+                    <th>Heure</th>
+                    <th>Lundi</th>
+                    <th>Mardi</th>
+                    <th>Mercredi</th>
+                    <th>Jeudi</th>
+                    <th>Vendredi</th>
+                    <th>Samedi</th>
+                </tr>
+                <tr>
+                    <th>8:00 - 10:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>10:00 - 12:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>12:00 - 14:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>14:00 - 16:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>16:00 - 18:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>18:00 - 20:00</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
 
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
 
-                    <label for="sujet">Sujet :</label>
-                    <input type="text" id="sujet" name="sujet" required>
-
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit"
-                        style="padding: 10px; width: fit-content; background-color: #e0e0e0; border: 1px solid black; cursor: pointer;">
-                        Envoyer
-                    </button>
-                </form>
-            </div>
-
-            <div id="image-col" class="col-droite">
-                <img src="logo.jpg" alt="Contact Omnes Immobilier" style="width: 300px; border: 1px solid black;">
-            </div>
+            </table>
         </div>
 
-        <!-- Pied de page -->
         <div id="footer">
             <div class="footer-content">
                 <div class="footer-left">
@@ -101,8 +143,10 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+
+
 </body>
 
 </html>

@@ -8,9 +8,9 @@
     <link rel="icon" type="image/x-icon" href="logo.jpg">
     <title>Omnes Immobilier</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
 
-    <script src="script.js"></script>
+    </style>
 
 </head>
 
@@ -19,7 +19,8 @@
 
         <div id="header">
             <h1>
-                <img id=logo src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
+                <img id=logo src="logo.jpg"
+                    alt="Omnes Immobilier Logo" width="100" height="100">
                 Omnes Immobilier
             </h1>
         </div>
@@ -52,38 +53,19 @@
 
         <br>
 
-        <div id="section">
-
-            <div>
-                <h2>Les Evènements de la semaine</h2>
-                <p>Découvrez les événements à venir dans le secteur immobilier cette semaine :</p>
-                <ul>
-                    <li>Conférence sur les tendances du marché immobilier - Lundi 15h</li>
-                    <li>Atelier de rénovation énergétique - Mercredi 10h</li>
-                    <li>Visite guidée des nouveaux projets immobiliers - Vendredi 14h</li>
-                </ul>
-                <p>Pour plus d'informations, consultez notre <a href="evenements.html">page des événements</a>.</p>
-            </div>
-
-            <div id="col-image-index">
-                <img src="logo.jpg" alt="Image d'illustration" width="300" height="400">
-            </div>
-
-
-            <div id="col-carrousel">
-                <h2>Bienvenue sur Omnes Immobilier !</h2>
-
-                <div class="carrousel-container">
-                    <img src="image1.jpeg" alt="Image 1" width="300" height="200">
-                    <img src="logo.jpg" alt="Image 2" width="300" height="200">
-                </div>
-
-                <div class="controls">
-                    <button class="prev">←</button>
-                    <button class="next">→</button>
-                </div>
-            </div>
-
+        <div id="sectionRecherche">
+            <div id="caseRecherche">
+                <h1>Recherche de biens immobiliers</h1>
+                <form action="" method="get">
+                    <label for="search" style="font-size: 24px;">Rechercher un bien :</label>
+                    <input id="barreRecherche" type="text" id="search" name="search" placeholder="Nom d'un agent immobilier ou Numéro d'une propriété ou Ville">
+                    <button id="boutonRecherche" type="submit">Rechercher</button>
+                </form>
+        <div id="resultatsRecherche">
+            <h2>Résultats de la recherche : </h2>
+            <!-- Insérer code pour effectuer recherche-->
+        </div>
+        </div>
         </div>
 
         <div id="footer">
@@ -98,10 +80,8 @@
 
                 <div class="footer-right">
                     <h3>Localisation</h3>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr"
-                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr" 
+                     height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
