@@ -1,0 +1,166 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3306
+-- Généré le : mer. 28 mai 2025 à 14:05
+-- Version du serveur : 5.7.40
+-- Version de PHP : 8.0.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `projet_piscine`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `administrateur`
+--
+
+DROP TABLE IF EXISTS `administrateur`;
+CREATE TABLE IF NOT EXISTS `administrateur` (
+  `Nom` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
+  `Courriel` varchar(255) NOT NULL,
+  `Telephone` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `administrateur`
+--
+
+INSERT INTO `administrateur` (`Nom`, `Prenom`, `Courriel`, `Telephone`) VALUES
+('Auvrignon', 'Benoit', 'benoit.auvrignon@edu.ece.fr', '0782998944'),
+('Tuaron Dit Casaux', 'Baptiste', 'baptiste.tuaronditcasaux@edu.ece.fr', '0646640109'),
+('Pottier', 'Matthieu', 'matthieu.pottier@edu.ece.fr', '0680201232'),
+('Wehbe', 'Roy', 'roy.wehbe@edu.ece.fr', '0680122123');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `agent_immobilier`
+--
+
+DROP TABLE IF EXISTS `agent_immobilier`;
+CREATE TABLE IF NOT EXISTS `agent_immobilier` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
+  `Photo` varchar(255) NOT NULL,
+  `Specialite` varchar(255) NOT NULL,
+  `Video` varchar(255) NOT NULL,
+  `CV` varchar(255) NOT NULL,
+  `Agenda` text NOT NULL,
+  `Courriel` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `bien_immobilier`
+--
+
+DROP TABLE IF EXISTS `bien_immobilier`;
+CREATE TABLE IF NOT EXISTS `bien_immobilier` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Categorie` varchar(255) NOT NULL,
+  `Adresse` varchar(255) NOT NULL,
+  `Description` varchar(255) NOT NULL,
+  `Photo` varchar(255) NOT NULL,
+  `Superficie` varchar(255) NOT NULL,
+  `Prix` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `bien_immobilier`
+--
+
+INSERT INTO `bien_immobilier` (`ID`, `Categorie`, `Adresse`, `Description`, `Photo`, `Superficie`, `Prix`) VALUES
+(1, 'Immobilier résidentiel', '12 Rue Lafayette, 75009 Paris', '3 chambres, 2 salles de bains', '/Image_bien/blabla.jpg', '85', '420000'),
+(2, 'Immobilier Commercial', '25 Boulevard Haussmann, 75009 Paris', 'Espace de bureaux, 2 salles de réunion', '/Image_bien/blabla.jpg', '120', '950000'),
+(3, 'Terrain', 'Chemin du Lavoir, 33500 Libourne', 'Terrain constructible', '/Image_bien/blabla.jpg', '800', '120000'),
+(4, 'Appartements à louer', '5 Rue de la République, 13001 Marseille', '2 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '60', '850'),
+(5, 'Immobilier en vente par enchère', '18 Rue Saint-Michel, 31000 Toulouse', '4 chambres, 3 salles de bains', '/Image_bien/blabla.jpg', '140', '375000'),
+(6, 'Immobilier résidentiel', '41 Avenue Foch, 69006 Lyon', '5 chambres, 2 salles de bains', '/Image_bien/blabla.jpg', '160', '650000'),
+(7, 'Immobilier Commercial', '3 Rue des Entrepreneurs, 75015 Paris', 'Boutique avec réserve', '/Image_bien/blabla.jpg', '70', '560000'),
+(8, 'Terrain', 'Route de Branne, 33330 Saint-Émilion', 'Terrain agricole', '/Image_bien/blabla.jpg', '1500', '90000'),
+(9, 'Appartements à louer', '8 Place Bellecour, 69002 Lyon', '1 chambre, 1 salle de bains', '/Image_bien/blabla.jpg', '45', '720'),
+(10, 'Immobilier en vente par enchère', '14 Rue du Palais, 67000 Strasbourg', 'Maison de 6 pièces, 3 salles de bains', '/Image_bien/blabla.jpg', '175', '510000'),
+(11, 'Immobilier résidentiel', '22 Rue Colbert, 59800 Lille', '2 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '70', '310000'),
+(12, 'Immobilier Commercial', '5 Rue de Metz, 57000 Metz', 'Magasin avec vitrine', '/Image_bien/blabla.jpg', '90', '420000'),
+(13, 'Terrain', 'Chemin des Vignes, 84200 Carpentras', 'Terrain plat, vue dégagée', '/Image_bien/blabla.jpg', '1000', '110000'),
+(14, 'Appartements à louer', '7 Quai des Chartrons, 33000 Bordeaux', '3 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '80', '980'),
+(15, 'Immobilier en vente par enchère', '4 Rue Gambetta, 86000 Poitiers', 'Maison ancienne, 5 chambres', '/Image_bien/blabla.jpg', '150', '295000'),
+(16, 'Immobilier résidentiel', '12 Rue Nationale, 72000 Le Mans', '4 chambres, 2 salles de bains', '/Image_bien/blabla.jpg', '135', '370000'),
+(17, 'Immobilier Commercial', 'Rue du Commerce, 21000 Dijon', 'Restaurant avec cuisine équipée', '/Image_bien/blabla.jpg', '85', '600000'),
+(18, 'Terrain', 'Route de la Forêt, 17100 Saintes', 'Terrain boisé', '/Image_bien/blabla.jpg', '2000', '75000'),
+(19, 'Appartements à louer', '9 Rue Sainte-Catherine, 69001 Lyon', 'Studio meublé', '/Image_bien/blabla.jpg', '30', '590'),
+(20, 'Immobilier en vente par enchère', '13 Boulevard Carnot, 06000 Nice', '3 chambres, 2 salles de bains', '/Image_bien/blabla.jpg', '95', '435000'),
+(21, 'Immobilier résidentiel', '6 Rue de l’Ouest, 75014 Paris', '2 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '68', '495000'),
+(22, 'Immobilier Commercial', '11 Rue Thiers, 80000 Amiens', 'Bureaux rénovés, open-space', '/Image_bien/blabla.jpg', '130', '700000'),
+(23, 'Terrain', 'Domaine de la Plaine, 30200 Bagnols-sur-Cèze', 'Terrain viabilisé', '/Image_bien/blabla.jpg', '1200', '105000'),
+(24, 'Appartements à louer', '28 Rue Alsace Lorraine, 31000 Toulouse', '1 chambre, 1 salle de bains', '/Image_bien/blabla.jpg', '50', '750'),
+(25, 'Immobilier en vente par enchère', '19 Rue Pierre Semard, 42000 Saint-Étienne', 'Maison mitoyenne, 4 chambres', '/Image_bien/blabla.jpg', '110', '265000'),
+(26, 'Immobilier résidentiel', '24 Rue de la Barre, 69002 Lyon', '5 chambres, 3 salles de bains', '/Image_bien/blabla.jpg', '180', '720000'),
+(27, 'Immobilier Commercial', 'Place du Marché, 56000 Vannes', 'Local commercial avec mezzanine', '/Image_bien/blabla.jpg', '95', '480000'),
+(28, 'Terrain', 'Chemin des Lavandes, 26700 Pierrelatte', 'Parcelle constructible', '/Image_bien/blabla.jpg', '1350', '88000'),
+(29, 'Appartements à louer', '11 Rue Nationale, 49100 Angers', '2 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '65', '820'),
+(30, 'Immobilier en vente par enchère', 'Place de la Bourse, 33000 Bordeaux', 'Appartement bourgeois, 4 pièces', '/Image_bien/blabla.jpg', '115', '505000'),
+(31, 'Immobilier résidentiel', '5 Rue Maréchal Foch, 64000 Pau', '3 chambres, 2 salles de bains', '/Image_bien/blabla.jpg', '100', '295000'),
+(32, 'Immobilier Commercial', 'Rue du Palais, 25000 Besançon', 'Espace coworking', '/Image_bien/blabla.jpg', '105', '390000'),
+(33, 'Terrain', 'Chemin de la Côte, 19100 Brive-la-Gaillarde', 'Terrain à bâtir', '/Image_bien/blabla.jpg', '1100', '92000'),
+(34, 'Appartements à louer', 'Rue des Granges, 25000 Besançon', 'Studio étudiant', '/Image_bien/blabla.jpg', '28', '510'),
+(35, 'Immobilier en vente par enchère', '12 Rue des Halles, 37000 Tours', 'Duplex, 3 chambres', '/Image_bien/blabla.jpg', '98', '345000'),
+(36, 'Immobilier résidentiel', 'Route des Alpes, 73000 Chambéry', 'Maison individuelle, 4 chambres', '/Image_bien/blabla.jpg', '145', '390000'),
+(37, 'Immobilier Commercial', 'Avenue Jean Jaurès, 34000 Montpellier', 'Magasin avec vitrine', '/Image_bien/blabla.jpg', '78', '310000'),
+(38, 'Terrain', 'Chemin du Moulin, 50100 Cherbourg', 'Terrain non constructible', '/Image_bien/blabla.jpg', '900', '60000'),
+(39, 'Appartements à louer', '3 Rue Michelet, 80000 Amiens', '2 chambres, 1 salle de bains', '/Image_bien/blabla.jpg', '55', '680');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE IF NOT EXISTS `client` (
+  `Nom` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
+  `Adresse_ligne1` varchar(255) NOT NULL,
+  `Adresse_ligne2` varchar(255) NOT NULL,
+  `Ville` varchar(255) NOT NULL,
+  `Code_Postal` int(11) NOT NULL,
+  `Pays` varchar(255) NOT NULL,
+  `Telephone` varchar(255) NOT NULL,
+  `Courriel` varchar(255) NOT NULL,
+  `Type_Carte` varchar(255) NOT NULL,
+  `Numero_Carte` varchar(255) NOT NULL,
+  `Nom_Carte` varchar(255) NOT NULL,
+  `Date_Expiration` varchar(255) NOT NULL,
+  `Code_Securite` int(11) NOT NULL,
+  `Motdepasse` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`Nom`, `Prenom`, `Adresse_ligne1`, `Adresse_ligne2`, `Ville`, `Code_Postal`, `Pays`, `Telephone`, `Courriel`, `Type_Carte`, `Numero_Carte`, `Nom_Carte`, `Date_Expiration`, `Code_Securite`, `Motdepasse`) VALUES
+('Dupont', 'Louis', '10 rue sextius-michel', '10 rue sextius-michel', 'Paris', 75015, 'France', '0601020304', 'louis.dupont@edu.ece.fr', 'visa', '1234', 'Dupont', '09/25', 123, 'louis');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
