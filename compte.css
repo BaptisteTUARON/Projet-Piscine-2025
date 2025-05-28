@@ -1,27 +1,44 @@
+
 .connexion {
     flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
 .buttons-connexion {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .btn-role {
     padding: 10px 15px;
-    border: none;
+    border: 1px solid black;
+    background-color: #e0e0e0;
     cursor: pointer;
-    background: #007bff;
-    color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.btn-role:hover {
+    background-color: lightgrey;
 }
 
 .btn-role.active {
-    background: #28a745;
+    background-color: #28a745;
+    color: white;
 }
 
 .form-container {
     display: none;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
 }
 
 .form-container.active {
@@ -35,12 +52,13 @@
 .form-group label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-group input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #999;
     box-sizing: border-box;
 }
 
@@ -48,21 +66,23 @@
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .btn-submit, .btn-secondary {
     padding: 10px 20px;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-submit {
-    background: #28a745;
+    background-color: #28a745;
     color: white;
 }
 
 .btn-secondary {
-    background: #6c757d;
+    background-color: #6c757d;
     color: white;
 }
 
@@ -70,12 +90,16 @@
     flex-shrink: 0;
     padding: 20px;
     text-align: center;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: #eeeeee;
 }
 
 .btn-deconnexion {
     padding: 10px 20px;
-    background: #dc3545;
+    background-color: #dc3545;
     color: white;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
+    font-weight: bold;
 }
