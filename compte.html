@@ -108,106 +108,108 @@
 </head>
 
 <body>
+
   <div id="wrapper">
 
     <div id="header">
-      <h1>
-        <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo">
-        Omnes Immobilier
-    </h1>
-</div>
-
-<div id="nav">
-  <a href="index.html">Accueil</a>
-  <div class="dropdown">
-    <a href="toutParcourir.html">Tout Parcourir</a>
-    <div class="dropdown-content">
-      <a href="immoResidentiel.html">Immobilier Résidentiel</a>
-      <a href="immoCommercial.html">Immobilier Commercial</a>
-      <a href="terrain.html">Terrain</a>
-      <a href="appartLouer.html">Appartements à louer</a>
-      <a href="immoEnchere.html">Immobilier en vente par enchère</a>
-  </div>
-</div>
-<div class="dropdown">
-    <a href="#">Recherche</a>
-    <div class="dropdown-content search-dropdown">
-      <form action="recherche.html" method="get">
-        <input type="text" name="query" placeholder="Tapez votre recherche..." />
-        <button type="submit">Rechercher</button>
-    </form>
-</div>
-</div>
-<a href="rendezVous.html">Rendez-vous</a>
-<a href="compte.html">Compte</a>
-</div>
-
-<div id="connexion-container">
-  <div class="connexion-top">
-    <div class="connexion-left">
-      <h2>Connexion</h2>
-      <div class="role-buttons">
-        <button id="btn-client" onclick="showForm('client')">Client</button>
-        <button id="btn-agent" onclick="showForm('agent')">Agent Immobilier</button>
-        <button id="btn-admin" onclick="showForm('admin')">Administrateur</button>
+        <h1>
+          <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo">
+          Omnes Immobilier
+        </h1>
     </div>
 
-    <form id="form-client" class="form-role">
-        <label for="client-email">Courriel :</label>
-        <input type="email" id="client-email" name="client-email" required>
-
-        <label for="client-password">Mot de passe :</label>
-        <input type="password" id="client-password" name="client-password" required>
-    </form>
-
-    <form id="form-agent" class="form-role">
-        <label for="agent-nom">Nom :</label>
-        <input type="text" id="agent-nom" name="agent-nom" required>
-
-        <label for="agent-prenom">Prénom :</label>
-        <input type="text" id="agent-prenom" name="agent-prenom" required>
-
-        <label for="agent-email">Courriel :</label>
-        <input type="email" id="agent-email" name="agent-email" required>
-    </form>
-
-    <form id="form-admin" class="form-role">
-        <label for="admin-nom">Nom :</label>
-        <input type="text" id="admin-nom" name="admin-nom" required>
-
-        <label for="admin-prenom">Prénom :</label>
-        <input type="text" id="admin-prenom" name="admin-prenom" required>
-
-        <label for="admin-email">Courriel :</label>
-        <input type="email" id="admin-email" name="admin-email" required>
-    </form>
-</div>
-
-<div class="connexion-right">
-  <div class="logout-section">
-    <h3>Déconnexion</h3>
-    <button>Se déconnecter</button>
-</div>
-</div>
-</div>
-</div>
-
-<div id="footer">
-  <div class="footer-content">
-    <div class="footer-left">
-      <h3>Contact</h3>
-      <p><strong>Omnes Immobilier</strong></p>
-      <p>12 rue de l'Immobilier, 75000 Paris</p>
-      <p>Tél : +33 1 23 45 67 89</p>
-      <p>Email : contact@omnes-immobilier.fr</p>
+  <div id="nav">
+    <a href="index.html">Accueil</a>
+    <div class="dropdown">
+      <a href="toutParcourir.html">Tout Parcourir</a>
+      <div class="dropdown-content">
+        <a href="immoResidentiel.html">Immobilier Résidentiel</a>
+        <a href="immoCommercial.html">Immobilier Commercial</a>
+        <a href="terrain.html">Terrain</a>
+        <a href="appartLouer.html">Appartements à louer</a>
+        <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <a href="#">Recherche</a>
+      <div class="dropdown-content search-dropdown">
+        <form action="recherche.html" method="get">
+          <input type="text" name="query" placeholder="Tapez votre recherche..." />
+          <button type="submit">Rechercher</button>
+      </form>
+      </div>
+    </div>
+    <a href="rendezVous.html">Rendez-vous</a>
+    <a href="compte.html">Compte</a>
   </div>
 
-  <div class="footer-right">
-      <h3>Localisation</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr" height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div id="connexion-container">
+    <div class="connexion-top">
+      <div class="connexion-left">
+        <h2>Connexion</h2>
+        <div class="role-buttons">
+          <button id="btn-client" onclick="showForm('client')">Client</button>
+          <button id="btn-agent" onclick="showForm('agent')">Agent Immobilier</button>
+          <button id="btn-admin" onclick="showForm('admin')">Administrateur</button>
+        </div>
+
+        <form id="form-client" class="form-role">
+          <label for="client-email">Courriel :</label>
+          <input type="email" id="client-email" name="client-email" required>
+
+          <label for="client-password">Mot de passe :</label>
+          <input type="password" id="client-password" name="client-password" required>
+        </form>
+
+        <form id="form-agent" class="form-role">
+          <label for="agent-nom">Nom :</label>
+          <input type="text" id="agent-nom" name="agent-nom" required>
+
+          <label for="agent-prenom">Prénom :</label>
+          <input type="text" id="agent-prenom" name="agent-prenom" required>
+
+          <label for="agent-email">Courriel :</label>
+          <input type="email" id="agent-email" name="agent-email" required>
+        </form>
+
+        <form id="form-admin" class="form-role">
+          <label for="admin-nom">Nom :</label>
+          <input type="text" id="admin-nom" name="admin-nom" required>
+
+          <label for="admin-prenom">Prénom :</label>
+          <input type="text" id="admin-prenom" name="admin-prenom" required>
+
+          <label for="admin-email">Courriel :</label>
+          <input type="email" id="admin-email" name="admin-email" required>
+        </form>
+      </div>
+
+      <div class="connexion-right">
+        <div class="logout-section">
+          <h3>Déconnexion</h3>
+          <button>Se déconnecter</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
+
+  <div id="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Contact</h3>
+        <p><strong>Omnes Immobilier</strong></p>
+        <p>12 rue de l'Immobilier, 75000 Paris</p>
+        <p>Tél : +33 1 23 45 67 89</p>
+        <p>Email : contact@omnes-immobilier.fr</p>
+      </div>
+
+      <div class="footer-right">
+        <h3>Localisation</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr" height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
