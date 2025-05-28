@@ -1,0 +1,81 @@
+.connexion {
+    flex: 1;
+}
+
+.buttons-connexion {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-role {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+}
+
+.btn-role.active {
+    background: #28a745;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-submit, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.deconnexion {
+    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-deconnexion {
+    padding: 10px 20px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
