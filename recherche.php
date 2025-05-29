@@ -49,7 +49,6 @@
                     <button id="boutonRecherche" type="submit">Rechercher</button>
                 </form>
                 <div id="resultatsRecherche">
-                    <h2>Résultats de la recherche : </h2>
                     <?php include 'resultats_recherche.php'; ?>
                 </div>
             </div>

@@ -19,6 +19,9 @@ if ($db_found) {
     $result2 = mysqli_query($db_handle, $sql2);
 
     $found = false;
+
+    echo "<h2>Résultats de la recherche : </h2>";
+
     while ($data = mysqli_fetch_assoc($result)) {
         if (stripos($data['ID'], $search) !== false || stripos($data['Ville'], $search) !== false) {
 
