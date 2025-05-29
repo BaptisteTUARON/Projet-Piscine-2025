@@ -34,7 +34,7 @@
                     <a href="immoEnchere.html">Immobilier en vente par enchère</a>
                 </div>
             </div>
-            <a href="recherche.html">Recherche</a>
+            <a href="recherche.php">Recherche</a>
             <a href="prendreRDV.html">Rendez-vous</a>
             <a href="compte.html">Compte</a>
         </div>
