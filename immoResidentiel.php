@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="logo.jpg">
     <title>Omnes Immobilier</title>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="script.js"></script>
 
 </head>
@@ -61,99 +61,15 @@
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>420 000 €</h3>
-                        <p>4 941 €/m²</p>
-                        <p><strong>Appartement à  vendre</strong><br>
-                        3 chambres・ 2 salles de bains・ 85 m²<br> 12 Rue Lafayette, 75009 Paris.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="Image_bien/1.jpg" alt="Appartement Paris">
+                        <?php include 'immoResidentiel1.php'; ?>
                     </div>
                 </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Maison – Marseille</h3>
-                        <p><strong>Prix :</strong> 550 000 €</p>
-                        <p><strong>Superficie :</strong> 110 m²</p>
-                        <p><strong>Chambres :</strong> 3</p>
-                        <p><strong>Description :</strong> Maison avec terrasse et jardin, située en périphérie calme.
-                        </p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Maison Marseille">
-                    </div>
-                </div>
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Appartement T2 – Bordeaux</h3>
-                        <p><strong>Prix :</strong> 320 000 €</p>
-                        <p><strong>Superficie :</strong> 60 m²</p>
-                        <p><strong>Chambres :</strong> 1</p>
-                        <p><strong>Description :</strong> Appartement moderne situé dans le centre historique, proche du
-                            tramway.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Appartement Bordeaux">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Villa – Nice</h3>
-                        <p><strong>Prix :</strong> 1 200 000 €</p>
-                        <p><strong>Superficie :</strong> 180 m²</p>
-                        <p><strong>Chambres :</strong> 4</p>
-                        <p><strong>Description :</strong> Villa avec vue mer, piscine et garage, située sur les hauteurs
-                            de Nice.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Villa Nice">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Studio – Lille</h3>
-                        <p><strong>Prix :</strong> 150 000 €</p>
-                        <p><strong>Superficie :</strong> 30 m²</p>
-                        <p><strong>Chambres :</strong> 1</p>
-                        <p><strong>Description :</strong> Studio idéal pour étudiant, situé à proximité de l’université
-                            Lille 1.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Studio Lille">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Loft – Lyon Confluence</h3>
-                        <p><strong>Prix :</strong> 720 000 €</p>
-                        <p><strong>Superficie :</strong> 100 m²</p>
-                        <p><strong>Chambres :</strong> 2</p>
-                        <p><strong>Description :</strong> Loft design dans un immeuble industriel réhabilité, quartier
-                            très recherché.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Loft Lyon">
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Colonne droite : image (carrousel futur) -->
             <div class="col-carrousel-immobilier">
                 <h2>Carrousel de nos Propriétés Résidentielles</h2>
                 <div class="carrousel-container">
-                    <img src="Image_bien/1.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/6.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/11.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/16.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/21.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/26.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/31.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/36.jpg" alt="Image 1" width="400" height="260">
+                    <?php include 'immoResidentiel2.php'; ?>
                 </div>
 
                 <div class="controls">

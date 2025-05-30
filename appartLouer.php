@@ -52,79 +52,19 @@
 
         </div>
 
-        <!-- Section principale -->
         <div id="section">
-
-            <!-- Colonne gauche : liste des appartements à louer -->
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Studio meublé – Paris 5ème</h3>
-                        <p><strong>Loyer :</strong> 850 €/mois</p>
-                        <p><strong>Surface :</strong> 25 m²</p>
-                        <p><strong>Description :</strong> Idéal étudiant, proche Sorbonne. Meublé, internet inclus.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Studio Paris">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>T2 – Lyon Part-Dieu</h3>
-                        <p><strong>Loyer :</strong> 1 050 €/mois</p>
-                        <p><strong>Surface :</strong> 45 m²</p>
-                        <p><strong>Description :</strong> Appartement moderne dans immeuble sécurisé, parking inclus.
-                        </p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Appartement Lyon">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>T3 avec balcon – Toulouse Rangueil</h3>
-                        <p><strong>Loyer :</strong> 1 200 €/mois</p>
-                        <p><strong>Surface :</strong> 70 m²</p>
-                        <p><strong>Description :</strong> Idéal famille ou colocation. Proche métro et universités.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Appartement Toulouse">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Appartement rénové – Bordeaux Chartrons</h3>
-                        <p><strong>Loyer :</strong> 1 300 €/mois</p>
-                        <p><strong>Surface :</strong> 65 m²</p>
-                        <p><strong>Description :</strong> Très lumineux, prestations de qualité, quartier recherché.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Appartement Bordeaux">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Studio – Lille</h3>
-                        <p><strong>Loyer :</strong> 680 €/mois</p>
-                        <p><strong>Surface :</strong> 20 m²</p>
-                        <p><strong>Description :</strong> Petit studio au calme, idéal étudiant. À 5 min du métro.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Studio Lille">
+                        <?php include 'appartLouer1.php'; ?>
                     </div>
                 </div>
             </div>
 
-            <!-- Colonne droite : image (carrousel futur) -->
             <div class="col-carrousel-immobilier">
-                <h2>Carrousel des Appartements à Louer</h2>
+                <h2>Carrousel de nos Propriétés Résidentielles</h2>
                 <div class="carrousel-container">
-                    <img src="image1.jpeg" alt="Image 1" width="300" height="200">
-                    <img src="logo.jpg" alt="Image 2" width="300" height="200">
+                    <?php include 'appartLouer2.php'; ?>
                 </div>
 
                 <div class="controls">
@@ -132,7 +72,6 @@
                     <button class="next">→</button>
                 </div>
             </div>
-
         </div>
 
         <!-- Pied de page -->

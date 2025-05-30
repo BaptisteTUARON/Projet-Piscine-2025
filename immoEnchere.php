@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="logo.jpg">
-    <title>Terrains - Omnes Immobilier</title>
+    <title>Immobilier en enchère - Omnes Immobilier</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -49,22 +49,22 @@
                     <a href="compte.php">Se connecter</a>
                 <?php endif; ?>
             </span>
-            
+
         </div>
 
         <div id="section">
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">
-                        <?php include 'terrain1.php'; ?>
+                        <?php include 'immoEnchere1.php'; ?>
                     </div>
                 </div>
             </div>
 
             <div class="col-carrousel-immobilier">
-                <h2>Carrousel de nos Propriétés Résidentielles</h2>
+                <h2>Carrousel de nos Propriétés en vente aux Enchères</h2>
                 <div class="carrousel-container">
-                    <?php include 'terrain2.php'; ?>
+                    <?php include 'immoEnchere2.php'; ?>
                 </div>
 
                 <div class="controls">
@@ -84,7 +84,6 @@
                     <p>Tél : +33 1 23 45 67 89</p>
                     <p>Email : contact@omnes-immobilier.fr</p>
                 </div>
-
                 <div class="footer-right">
                     <h3>Localisation</h3>
                     <iframe

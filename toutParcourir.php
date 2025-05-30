@@ -59,15 +59,9 @@
         <div id="section">
 
             <div id="col-carrousel-toutParcourir">
-                <h2>Propriétés de niveau haut de gamme ! </h2>
+                <h2>Toutes les propriétés disponibles</h2>
                 <div class="carrousel-container">
-                    <img src="Image_bien/35.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/21.jpg" alt="Image 2" width="400" height="260">
-                    <img src="Image_bien/36.jpg" alt="Image 3" width="400" height="260">
-                    <img src="Image_bien/26.jpg" alt="Image 4" width="400" height="260">
-                    <img src="Image_bien/27.jpg" alt="Image 5" width="400" height="260">
-                    <img src="Image_bien/31.jpg" alt="Image 6" width="400" height="260">
-                    <img src="Image_bien/25.jpg" alt="Image 7" width="400" height="260">
+                    <?php include 'toutParcourir2.php'; ?>
                 </div>
 
                 <div class="controls">
@@ -76,51 +70,11 @@
                 </div>
             </div>
 
-
             <div id="col-images-toutParcourir">
-                <!-- Colonne droite Imagez de biens sous forme de tableau : deux images par rang dans la colonne avec petit descriprion-->
+                
                 <h2>Parcourir Nos Biens Immobiliers Disponibles</h2>
                 <div class="bien-toutParcourir">
-                    <img src="Image_bien/31.jpg" alt="Bien 1" width="300" height="200">
-                    <h3>295 000 €</h3>
-                    <p>2 950 €/m²</p>
-                    <p><strong>Appartement à  vendre</strong><br>
-                    3 chambres・ 2 salles de bains・ 100 m²<br> 5 Rue Maréchal Foch, 64000 Pau.</p>
-                </div>
-                <div class="bien-toutParcourir">
-                    <img src="Image_bien/36.jpg" alt="Bien 2" width="300" height="200">
-                    <h3>390 000 €</h3>
-                    <p>2 689 €/m²</p>
-                    <p><strong>Maison individuelle à  vendre</strong><br>
-                    4 chambres ・ 145 m²<br> Route des Alpes, 73000 Chambéry.</p>
-                </div>
-                <div class="bien-toutParcourir">
-                    <img src="Image_bien/25.jpg" alt="Bien 3" width="300" height="200">
-                    <h3>265 000 €</h3>
-                    <p>2 409 €/m²</p>
-                    <p><strong>Maison mitoyenne à  vendre</strong><br>
-                    4 chambres ・ 110 m²<br> 19 Rue Pierre Semard, 42000 Saint-Étienne.</p>
-                </div>
-                <div class="bien-toutParcourir">
-                    <img src="Image_bien/26.jpg" alt="Bien 4" width="300" height="200">
-                    <h3>720 000 €</h3>
-                    <p>4 000 €/m²</p>
-                    <p><strong>Appartement à  vendre</strong><br>
-                    5 chambres ・ 3 salles de bains ・ 180 m²<br> 24 Rue de la Barre, 69002 Lyon.</p>
-                </div>
-                <div class="bien-toutParcourir">
-                    <img src="Image_bien/27.jpg" alt="Bien 5" width="300" height="200">
-                    <h3>480 000 €</h3>
-                    <p>5 052 €/m²</p>
-                    <p><strong>Local à  vendre</strong><br>
-                    Local commercial avec mezzanine ・ 95 m²<br> Place du Marché, 56000 Vannes.</p>
-                </div>
-                <div class="bien-toutParcourir">
-                    <img src="Image_bien/21.jpg" alt="Bien 6" width="300" height="200">
-                    <h3>495 000 €</h3>
-                    <p>7 279 €/m²</p>
-                    <p><strong>Appartement à  vendre</strong><br>
-                    2 chambres ・ 1 salle de bains ・ 68 m²<br> 6 Rue de l’Ouest, 75014 Paris.</p>
+                    <?php include 'toutParcourir3.php'; ?>
                 </div>
             </div>
         </div>

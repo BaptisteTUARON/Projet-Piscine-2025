@@ -57,100 +57,18 @@
         <br>
 
         <div id="section">
-            <!-- Colonne gauche : liste des biens commerciaux -->
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Bureaux – Paris La Défense</h3>
-                        <p><strong>Prix :</strong> 950 000 €</p>
-                        <p><strong>Superficie :</strong> 150 m²</p>
-                        <p><strong>Pièces :</strong> 5</p>
-                        <p><strong>Description :</strong> Plateaux de bureaux modernes au cœur du quartier d’affaires,
-                            avec
-                            parkings et accès transports.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Bureaux Paris La Défense">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Local commercial – Marseille Vieux-Port</h3>
-                        <p><strong>Prix :</strong> 620 000 €</p>
-                        <p><strong>Superficie :</strong> 90 m²</p>
-                        <p><strong>Pièces :</strong> 2</p>
-                        <p><strong>Description :</strong> Local avec vitrine sur rue piétonne, idéal pour commerce de
-                            proximité.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Local Marseille">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Boutique – Bordeaux Centre</h3>
-                        <p><strong>Prix :</strong> 480 000 €</p>
-                        <p><strong>Superficie :</strong> 70 m²</p>
-                        <p><strong>Pièces :</strong> 1</p>
-                        <p><strong>Description :</strong> Boutique entièrement rénovée, très bon emplacement commercial,
-                            flux piéton élevé.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Boutique Bordeaux">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Entrepôt – Lyon Sud</h3>
-                        <p><strong>Prix :</strong> 800 000 €</p>
-                        <p><strong>Superficie :</strong> 500 m²</p>
-                        <p><strong>Pièces :</strong> 2 grands espaces</p>
-                        <p><strong>Description :</strong> Entrepôt avec quai de chargement, accès poids lourds, idéal
-                            logistique ou stockage.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Entrepôt Lyon">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Restaurant – Lille Centre</h3>
-                        <p><strong>Prix :</strong> 540 000 €</p>
-                        <p><strong>Superficie :</strong> 120 m²</p>
-                        <p><strong>Pièces :</strong> 3</p>
-                        <p><strong>Description :</strong> Restaurant entièrement équipé, licence IV incluse, quartier
-                            animé et touristique.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Restaurant Lille">
-                    </div>
-                </div>
-
-                <div class="appartement-immo">
-                    <div class="infos">
-                        <h3>Centre médical – Toulouse</h3>
-                        <p><strong>Prix :</strong> 1 050 000 €</p>
-                        <p><strong>Superficie :</strong> 200 m²</p>
-                        <p><strong>Pièces :</strong> 6 cabinets + salle d’attente</p>
-                        <p><strong>Description :</strong> Espace adapté pour activité médicale ou paramédicale, normes
-                            PMR, parking privé.</p>
-                    </div>
-                    <div class="visuel">
-                        <img src="logo.jpg" alt="Centre médical Toulouse">
+                        <?php include 'immoCommercial1.php'; ?>
                     </div>
                 </div>
             </div>
 
-            <!-- Colonne droite : image (carrousel futur) -->
             <div class="col-carrousel-immobilier">
-                <h2>Carrousel de nos Biens Commerciaux</h2>
+                <h2>Carrousel de nos Propriétés Résidentielles</h2>
                 <div class="carrousel-container">
-                    <img src="image1.jpeg" alt="Image 1" width="300" height="200">
-                    <img src="logo.jpg" alt="Image 2" width="300" height="200">
+                    <?php include 'immoCommercial2.php'; ?>
                 </div>
 
                 <div class="controls">
@@ -159,7 +77,6 @@
                 </div>
             </div>
         </div>
-
 
 
         <div id="footer">
