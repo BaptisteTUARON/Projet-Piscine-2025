@@ -360,3 +360,19 @@ td {
     align-items: center;
     
 }
+
+
+/* Styles emploi du temps */
+
+.emploiDuTemps {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.emploiDuTemps th, .emploiDuTemps td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}

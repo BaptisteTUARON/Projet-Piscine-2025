@@ -1,3 +1,5 @@
+<?php include 'session.php'; ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +15,6 @@
 </head>
 
 <body>
-
   <div id="wrapper">
 
     <div id="header">
@@ -24,23 +25,33 @@
     </div>
 
     <div id="nav">
-      <a href="index.html">Accueil</a>
-      <div class="dropdown">
-        <a href="toutParcourir.html">Tout Parcourir</a>
-        <div class="dropdown-content">
-          <a href="immoResidentiel.html">Immobilier Résidentiel</a>
-          <a href="immoCommercial.html">Immobilier Commercial</a>
-          <a href="terrain.html">Terrain</a>
-          <a href="appartLouer.html">Appartements à louer</a>
-          <a href="immoEnchere.html">Immobilier en vente par enchère</a>
-        </div>
-      </div>
-      <a href="recherche.php">Recherche</a>
-      <a href="prendreRDV.html">Rendez-vous</a>
-      <a href="compte.html">Compte</a>
-    </div>
+            <a href="index.php">Accueil</a>
+            <div class="dropdown">
+                <a href="toutParcourir.php">Tout Parcourir</a>
+                <div class="dropdown-content">
+                    <a href="immoResidentiel.php">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.php">Immobilier Commercial</a>
+                    <a href="terrain.php">Terrain</a>
+                    <a href="appartLouer.php">Appartements à louer</a>
+                    <a href="immoEnchere.php">Immobilier en vente par enchère</a>
+                </div>
+            </div>
+            <a href="recherche.php">Recherche</a>
+            <a href="prendreRDV.php">Rendez-vous</a>
+            <a href="compte.php">Compte</a>
 
-     <div id="section">
+            <span style="float:right; padding-right: 20px;">
+                <?php if ($role): ?>
+                    Connecté en tant que <strong><?= ucfirst($role) ?></strong> (<?= $prenom ?> <?= $nom ?>)
+                    <a href="deconnexion.php" style="margin-left: 10px;">Déconnexion</a>
+                <?php else: ?>
+                    <a href="compte.php">Se connecter</a>
+                <?php endif; ?>
+            </span>
+
+        </div>
+
+    <div id="section">
       <div class="connexion">
 
         <div class="buttons-connexion">
@@ -51,14 +62,14 @@
 
         <div id="form-client" class="form-container">
           <h3 class="form-title">Connexion Client</h3>
-          <form>
+          <form action="connexion_client.php" method="post">
             <div class="form-group">
               <label for="client-courriel">Courriel</label>
-              <input type="text" id="client-courriel" name="client-courriel" required>
+              <input type="text" id="client-courriel" name="mail" required>
             </div>
             <div class="form-group">
               <label for="client-password">Mot de passe</label>
-              <input type="password" id="client-password" name="client-password" required>
+              <input type="password" id="client-password" name="password" required>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-submit">Se connecter</button>
@@ -69,34 +80,34 @@
 
         <div id="form-inscription" class="form-container">
           <h3 class="form-title">Inscription Client</h3>
-          <form>
+          <form action="inscription_client.php" method="post">
             <div class="form-group">
               <label for="inscription-nom">Nom</label>
-              <input type="text" id="inscription-nom" name="inscription-nom" required>
+              <input type="text" id="inscription-nom" name="nom" required>
             </div>
             <div class="form-group">
               <label for="inscription-prenom">Prénom</label>
-              <input type="text" id="inscription-prenom" name="inscription-prenom" required>
+              <input type="text" id="inscription-prenom" name="prenom" required>
             </div>
             <div class="form-group">
               <label for="inscription-email">Courriel</label>
-              <input type="email" id="inscription-email" name="inscription-email" required>
+              <input type="email" id="inscription-email" name="email" required>
             </div>
             <div class="form-group">
               <label for="inscription-telephone">Téléphone</label>
-              <input type="tel" id="inscription-telephone" name="inscription-telephone" required>
+              <input type="tel" id="inscription-telephone" name="telephone" required>
             </div>
             <div class="form-group">
               <label for="inscription-adresse1">Adresse 1</label>
-              <input type="text" id="inscription-adresse1" name="inscription-adresse1" required>
+              <input type="text" id="inscription-adresse1" name="adresse1" required>
             </div>
             <div class="form-group">
               <label for="inscription-adresse2">Adresse 2</label>
-              <input type="text" id="inscription-adresse2" name="inscription-adresse2" required>
+              <input type="text" id="inscription-adresse2" name="adresse2" required>
             </div>
             <div class="form-group">
               <label for="inscription-password">Mot de passe</label>
-              <input type="password" id="inscription-password" name="inscription-password" required>
+              <input type="password" id="inscription-password" name="password" required>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-submit">S'inscrire</button>
@@ -107,18 +118,18 @@
 
         <div id="form-agent" class="form-container">
           <h3 class="form-title">Connexion Agent Immobilier</h3>
-          <form>
+          <form action="connexion_agent.php" method="post">
             <div class="form-group">
               <label>Nom</label>
-              <input type="text" id="agent-nom" name="agent-nom" required>
+              <input type="text" id="agent-nom" name="nom" required>
             </div>
             <div class="form-group">
               <label>Prénom</label>
-              <input type="text" id="agent-prenom" name="agent-prenom" required>
+              <input type="text" id="agent-prenom" name="prenom" required>
             </div>
             <div class="form-group">
               <label>Courriel</label>
-              <input type="text" id="agent-courriel" name="agent-courriel" required>
+              <input type="text" id="agent-courriel" name="email" required>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-submit">Se connecter</button>
@@ -128,18 +139,18 @@
 
         <div id="form-admin" class="form-container">
           <h3 class="form-title">Connexion Administrateur</h3>
-          <form>
+          <form action="connexion_admin.php" method="post">
             <div class="form-group">
               <label>Nom</label>
-              <input type="text" id="admin-nom" name="admin-nom" required>
+              <input type="text" id="admin-nom" name="nom" required>
             </div>
             <div class="form-group">
               <label>Prénom</label>
-              <input type="text" id="admin-prenom" name="admin-prenom" required>
+              <input type="text" id="admin-prenom" name="prenom" required>
             </div>
             <div class="form-group">
               <label>Courriel</label>
-              <input type="text" id="admin-courriel" name="admin-courriel" required>
+              <input type="text" id="admin-courriel" name="email" required>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-submit">Se connecter</button>
@@ -150,7 +161,9 @@
 
       <div class="deconnexion">
         <h3>Déconnexion</h3>
-        <button class="btn-deconnexion">Se déconnecter</button>
+        <button class="btn-deconnexion">
+            <a id="btndeco" href="deconnexion.php">Se déconnecter<a>
+        </button>
       </div>
     </div>
 
@@ -166,7 +179,10 @@
 
         <div class="footer-right">
           <h3>Localisation</h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr" height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.486706613472!2d2.2859909763572652!3d48.851225171331194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20Paris!5e1!3m2!1sen!2sfr!4v1748246695262!5m2!1sen!2sfr"
+            height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

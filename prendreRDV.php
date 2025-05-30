@@ -1,3 +1,4 @@
+<?php include 'session.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -10,13 +11,41 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-    <script src="script.js"></script>
+    <script>
+        window.onload = function () {
+            fetch('charger_disponibilites.php')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('tables-agents').innerHTML = html;
+                });
+        };
 
+        function reserverCreneau(idDispo) {
+            const nom = prompt("Entrez votre nom :");
+            const prenom = prompt("Entrez votre prénom :");
+            const email = prompt("Entrez votre email :");
+
+            if (!nom || !prenom || !email) {
+                alert("Tous les champs sont obligatoires.");
+                return;
+            }
+
+            fetch('reserver_creneau.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `id=${idDispo}&nom=${encodeURIComponent(nom)}&prenom=${encodeURIComponent(prenom)}&email=${encodeURIComponent(email)}`
+            })
+                .then(res => res.text())
+                .then(response => {
+                    alert(response);
+                    location.reload(); // Recharge les créneaux
+                });
+        }
+    </script>
 </head>
 
 <body>
     <div id="wrapper">
-
         <div id="header">
             <h1>
                 <img id=logo src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
@@ -26,7 +55,7 @@
         <br>
 
         <div id="nav">
-            <a href="index.html">Accueil</a>
+            <a href="index.php">Accueil</a>
             <div class="dropdown">
                 <a href="toutParcourir.html">Tout Parcourir</a>
                 <div class="dropdown-content">
@@ -38,49 +67,26 @@
                 </div>
             </div>
             <a href="recherche.php">Recherche</a>
-            <a href="prendreRDV.html">Rendez-vous</a>
-            <a href="compte.html">Compte</a>
+            <a href="prendreRDV.php">Rendez-vous</a>
+            <a href="compte.php">Compte</a>
+
+            <span style="float:right; padding-right: 20px;">
+                <?php if ($role): ?>
+                    Connecté en tant que <strong><?= ucfirst($role) ?></strong> (<?= $prenom ?> <?= $nom ?>)
+                    <a href="deconnexion.php" style="margin-left: 10px;">Déconnexion</a>
+                <?php else: ?>
+                    <a href="compte.php">Se connecter</a>
+                <?php endif; ?>
+            </span>
         </div>
 
         <br>
-
-        <div id="section">
-
-            <div>
-                <h2>Les Evènements de la semaine</h2>
-                <p>Découvrez les événements à venir dans le secteur immobilier cette semaine :</p>
-                <ul>
-                    <li>Conférence sur les tendances du marché immobilier - Lundi 15h</li>
-                    <li>Webinaire sur l'investissement locatif rentable – Mardi 18h</li>
-                    <li>Atelier de rénovation énergétique - Mercredi 10h</li>
-                    <li>Visite guidée des nouveaux projets immobiliers - Vendredi 14h</li>
-                </ul>
-                <p>Pour plus d'informations, consultez notre <a href="evenements.html">page des événements</a>.</p>
+        <div id="section"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <h1 style="text-align: center;">Prendre un rendez-vous avec un de nos conseillers</h1>
+            <div id="tables-agents" style="width: 100%; overflow-x: auto;">
+                <!-- Les tableaux par agent seront générés ici via PHP -->
             </div>
-
-            <div id="col-image-index">
-                <img src="Image_bien/price-map.webp" alt="Image d'illustration" width="400" height="300">
-            </div>
-
-
-            <div id="col-carrousel">
-                <h2>Bienvenue sur Omnes Immobilier !</h2>
-
-                <div class="carrousel-container">
-                    <img src="Image_bien/10.jpg" alt="Image 1" width="400" height="260">
-                    <img src="Image_bien/21.jpg" alt="Image 2" width="400" height="260">
-                    <img src="Image_bien/25.jpg" alt="Image 3" width="400" height="260">
-                    <img src="Image_bien/26.jpg" alt="Image 4" width="400" height="260">
-                    <img src="Image_bien/27.jpg" alt="Image 5" width="400" height="260">
-                    <img src="Image_bien/31.jpg" alt="Image 6" width="400" height="260">
-                </div>
-
-                <div class="controls">
-                    <button class="prev">←</button>
-                    <button class="next">→</button>
-                </div>
-            </div>
-
         </div>
 
         <div id="footer">
@@ -103,9 +109,6 @@
             </div>
         </div>
     </div>
-
-
-
 </body>
 
 </html>

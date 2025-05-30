@@ -1,3 +1,5 @@
+<?php include 'session.php'; ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,21 +27,31 @@
         </div>
         <br>
 
-        <div id="nav"> <!-- Nav bar, when hovering open another menu-->
-            <a href="index.html">Accueil</a>
+        <div id="nav">
+            <a href="index.php">Accueil</a>
             <div class="dropdown">
-                <a href="toutParcourir.html">Tout Parcourir</a>
+                <a href="toutParcourir.php">Tout Parcourir</a>
                 <div class="dropdown-content">
-                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
-                    <a href="immoCommercial.html">Immobilier Commercial</a>
-                    <a href="terrain.html">Terrain</a>
-                    <a href="appartLouer.html">Appartements à louer</a>
-                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                    <a href="immoResidentiel.php">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.php">Immobilier Commercial</a>
+                    <a href="terrain.php">Terrain</a>
+                    <a href="appartLouer.php">Appartements à louer</a>
+                    <a href="immoEnchere.php">Immobilier en vente par enchère</a>
                 </div>
             </div>
             <a href="recherche.php">Recherche</a>
-            <a href="prendreRDV.html">Rendez-vous</a>
-            <a href="compte.html">Compte</a>
+            <a href="prendreRDV.php">Rendez-vous</a>
+            <a href="compte.php">Compte</a>
+
+            <span style="float:right; padding-right: 20px;">
+                <?php if ($role): ?>
+                    Connecté en tant que <strong><?= ucfirst($role) ?></strong> (<?= $prenom ?> <?= $nom ?>)
+                    <a href="deconnexion.php" style="margin-left: 10px;">Déconnexion</a>
+                <?php else: ?>
+                    <a href="compte.php">Se connecter</a>
+                <?php endif; ?>
+            </span>
+
         </div>
 
         <br>

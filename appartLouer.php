@@ -1,3 +1,5 @@
+<?php include 'session.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="logo.jpg">
-    <title>Terrains - Omnes Immobilier</title>
+    <title>Appartements à louer - Omnes Immobilier</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -24,91 +26,102 @@
 
         <!-- Navigation -->
         <div id="nav">
-            <a href="index.html">Accueil</a>
+            <a href="index.php">Accueil</a>
             <div class="dropdown">
-                <a href="toutParcourir.html">Tout Parcourir</a>
+                <a href="toutParcourir.php">Tout Parcourir</a>
                 <div class="dropdown-content">
-                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
-                    <a href="immoCommercial.html">Immobilier Commercial</a>
-                    <a href="terrain.html">Terrain</a>
-                    <a href="appartLouer.html">Appartements à louer</a>
-                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                    <a href="immoResidentiel.php">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.php">Immobilier Commercial</a>
+                    <a href="terrain.php">Terrain</a>
+                    <a href="appartLouer.php">Appartements à louer</a>
+                    <a href="immoEnchere.php">Immobilier en vente par enchère</a>
                 </div>
             </div>
             <a href="recherche.php">Recherche</a>
-            <a href="prendreRDV.html">Rendez-vous</a>
-            <a href="compte.html">Compte</a>
+            <a href="prendreRDV.php">Rendez-vous</a>
+            <a href="compte.php">Compte</a>
+
+            <span style="float:right; padding-right: 20px;">
+                <?php if ($role): ?>
+                    Connecté en tant que <strong><?= ucfirst($role) ?></strong> (<?= $prenom ?> <?= $nom ?>)
+                    <a href="deconnexion.php" style="margin-left: 10px;">Déconnexion</a>
+                <?php else: ?>
+                    <a href="compte.php">Se connecter</a>
+                <?php endif; ?>
+            </span>
+
         </div>
 
         <!-- Section principale -->
         <div id="section">
 
-            <!-- Colonne gauche : liste des terrains -->
+            <!-- Colonne gauche : liste des appartements à louer -->
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Terrain constructible – Nantes</h3>
-                        <p><strong>Prix :</strong> 250 000 €</p>
-                        <p><strong>Surface :</strong> 600 m²</p>
-                        <p><strong>Description :</strong> Terrain viabilisé situé en lotissement résidentiel. COS favorable.</p>
+                        <h3>Studio meublé – Paris 5ème</h3>
+                        <p><strong>Loyer :</strong> 850 €/mois</p>
+                        <p><strong>Surface :</strong> 25 m²</p>
+                        <p><strong>Description :</strong> Idéal étudiant, proche Sorbonne. Meublé, internet inclus.</p>
                     </div>
                     <div class="visuel">
-                        <img src="logo.jpg" alt="Terrain Nantes">
+                        <img src="logo.jpg" alt="Studio Paris">
                     </div>
                 </div>
 
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Terrain agricole – Toulouse</h3>
-                        <p><strong>Prix :</strong> 180 000 €</p>
-                        <p><strong>Surface :</strong> 1,2 hectare</p>
-                        <p><strong>Description :</strong> Terrain plat, idéal pour culture bio ou élevage, accessible en tracteur.</p>
+                        <h3>T2 – Lyon Part-Dieu</h3>
+                        <p><strong>Loyer :</strong> 1 050 €/mois</p>
+                        <p><strong>Surface :</strong> 45 m²</p>
+                        <p><strong>Description :</strong> Appartement moderne dans immeuble sécurisé, parking inclus.
+                        </p>
                     </div>
                     <div class="visuel">
-                        <img src="logo.jpg" alt="Terrain Toulouse">
+                        <img src="logo.jpg" alt="Appartement Lyon">
                     </div>
                 </div>
 
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Parcelle boisée – Grenoble</h3>
-                        <p><strong>Prix :</strong> 90 000 €</p>
-                        <p><strong>Surface :</strong> 1500 m²</p>
-                        <p><strong>Description :</strong> Idéal pour résidence secondaire. Environnement calme, accès par chemin rural.</p>
+                        <h3>T3 avec balcon – Toulouse Rangueil</h3>
+                        <p><strong>Loyer :</strong> 1 200 €/mois</p>
+                        <p><strong>Surface :</strong> 70 m²</p>
+                        <p><strong>Description :</strong> Idéal famille ou colocation. Proche métro et universités.</p>
                     </div>
                     <div class="visuel">
-                        <img src="logo.jpg" alt="Terrain Grenoble">
+                        <img src="logo.jpg" alt="Appartement Toulouse">
                     </div>
                 </div>
 
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Terrain viabilisé – Bordeaux</h3>
-                        <p><strong>Prix :</strong> 310 000 €</p>
-                        <p><strong>Surface :</strong> 800 m²</p>
-                        <p><strong>Description :</strong> Quartier résidentiel en développement, permis de construire accordé.</p>
+                        <h3>Appartement rénové – Bordeaux Chartrons</h3>
+                        <p><strong>Loyer :</strong> 1 300 €/mois</p>
+                        <p><strong>Surface :</strong> 65 m²</p>
+                        <p><strong>Description :</strong> Très lumineux, prestations de qualité, quartier recherché.</p>
                     </div>
                     <div class="visuel">
-                        <img src="logo.jpg" alt="Terrain Bordeaux">
+                        <img src="logo.jpg" alt="Appartement Bordeaux">
                     </div>
                 </div>
 
                 <div class="appartement-immo">
                     <div class="infos">
-                        <h3>Terrain à bâtir – Montpellier</h3>
-                        <p><strong>Prix :</strong> 275 000 €</p>
-                        <p><strong>Surface :</strong> 700 m²</p>
-                        <p><strong>Description :</strong> Proche centre-ville et tramway, belle opportunité d'investissement.</p>
+                        <h3>Studio – Lille</h3>
+                        <p><strong>Loyer :</strong> 680 €/mois</p>
+                        <p><strong>Surface :</strong> 20 m²</p>
+                        <p><strong>Description :</strong> Petit studio au calme, idéal étudiant. À 5 min du métro.</p>
                     </div>
                     <div class="visuel">
-                        <img src="logo.jpg" alt="Terrain Montpellier">
+                        <img src="logo.jpg" alt="Studio Lille">
                     </div>
                 </div>
             </div>
 
             <!-- Colonne droite : image (carrousel futur) -->
             <div class="col-carrousel-immobilier">
-                <h2>Carrousel de nos Terrains</h2>
+                <h2>Carrousel des Appartements à Louer</h2>
                 <div class="carrousel-container">
                     <img src="image1.jpeg" alt="Image 1" width="300" height="200">
                     <img src="logo.jpg" alt="Image 2" width="300" height="200">
@@ -132,7 +145,6 @@
                     <p>Tél : +33 1 23 45 67 89</p>
                     <p>Email : contact@omnes-immobilier.fr</p>
                 </div>
-
                 <div class="footer-right">
                     <h3>Localisation</h3>
                     <iframe
