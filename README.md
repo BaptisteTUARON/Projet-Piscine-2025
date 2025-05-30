@@ -2,4 +2,4 @@
 
 lien pour le PowerPoint :
 
-https://poce-my.sharepoint.com/:p:/g/personal/roy_wehbe_edu_ece_fr/Ec5weWN-uOVPtlBr2xd6K0IBAakEr17UNpAh5v4ZUXJX0Q?e=teoWRl
+https://www.canva.com/design/DAGo6L2lMLM/psYaYGDEp8oXsGO4ocj1Ww/edit?utm_content=DAGo6L2lMLM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
