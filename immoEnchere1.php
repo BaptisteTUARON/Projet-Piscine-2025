@@ -13,15 +13,18 @@ if ($db_found) {
             $photo = htmlspecialchars($row['Photo']);
             $categorie = htmlspecialchars($row['Categorie']);
             $id = htmlspecialchars($row['ID']);
-            $superficie = isset($row['Superficie']) ? $row['Superficie'] : 'N/A';
-            $prix = isset($row['Prix']) ? number_format($row['Prix'], 0, ',', ' ') . " €" : 'N/A';
+            $superficie = isset($row['Superficie']) ? $row['Superficie'] : '';
+            $prix = isset($row['Prix']) ? number_format($row['Prix'], 0, ',', ' ') . " €" : '';
             $description = nl2br(htmlspecialchars($row['Description']));
+            $adresse = isset($row['Adresse']) ? $row['Adresse'] : '';
+            $ville = isset($row['Ville']) ? $row['Ville'] : '';
 
             echo '<div class="bien-toutParcourir">';
             echo "<img src=\"$photo\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
             echo "<p><strong>$categorie - $id</strong></p>";
             echo "<p>$superficie m² - $prix</p>";
             echo "<p>$description</p>";
+            echo "<p>$adresse $ville</p>";
             echo '</div>';
         }
     } else {
