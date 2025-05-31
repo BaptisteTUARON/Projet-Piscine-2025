@@ -12,45 +12,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     <script>
-    // Récupération des infos de session côté PHP et passage en JS
-    const nom = <?= json_encode($nom ?? '') ?>;
-    const prenom = <?= json_encode($prenom ?? '') ?>;
-    const email = <?= json_encode($email ?? ($_SESSION['utilisateur_email'] ?? '')) ?>;
+        const nom = <?= json_encode($nom ?? '') ?>;
+        const prenom = <?= json_encode($prenom ?? '') ?>;
+        const email = <?= json_encode($email ?? ($_SESSION['utilisateur_email'] ?? '')) ?>;
 
-    window.onload = function () {
-        fetch('charger_disponibilites.php')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('tables-agents').innerHTML = html;
-            });
-    };
+        window.onload = function () {
+            fetch('charger_disponibilites.php')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('tables-agents').innerHTML = html;
+                });
+        };
 
-    function reserverCreneau(idDispo) {
-        if (!nom || !prenom || !email) {
-            alert("Vous devez être connecté pour réserver un créneau.");
-            return;
+        function reserverCreneau(idDispo) {
+            if (!nom || !prenom || !email) {
+                alert("Vous devez être connecté pour réserver un créneau.");
+                return;
+            }
+            if (!confirm('Voulez-vous réserver ce créneau ?')) return;
+
+            fetch('reserver_creneau.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `id=${idDispo}&nom=${encodeURIComponent(nom)}&prenom=${encodeURIComponent(prenom)}&email=${encodeURIComponent(email)}`
+            })
+                .then(res => res.text())
+                .then(response => {
+                    alert(response);
+                    location.reload();
+                });
         }
-        if (!confirm('Voulez-vous réserver ce créneau ?')) return;
-
-        fetch('reserver_creneau.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `id=${idDispo}&nom=${encodeURIComponent(nom)}&prenom=${encodeURIComponent(prenom)}&email=${encodeURIComponent(email)}`
-        })
-            .then(res => res.text())
-            .then(response => {
-                alert(response);
-                location.reload(); // Recharge les créneaux
-            });
-    }
-</script>
+    </script>
 </head>
 
 <body>
     <div id="wrapper">
         <div id="header">
             <h1>
-                <img id=logo src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
+                <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
                 Omnes Immobilier
             </h1>
         </div>
@@ -70,7 +69,7 @@
             </div>
             <a href="recherche.php">Recherche</a>
             <a href="prendreRDV.php">Rendez-vous</a>
-            
+
             <span style="float:right; padding-right: 20px;">
                 <?php if ($role): ?>
                     <a href="compte.php" style="margin-left: 10px;">Compte</a>
@@ -82,11 +81,10 @@
         </div>
 
         <br>
-        <div id="section"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+        <div id="section" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
             <h1 style="text-align: center;">Prendre un rendez-vous avec un de nos conseillers</h1>
             <div id="tables-agents" style="width: 100%; overflow-x: auto;">
-                <!-- Les tableaux par agent sont générés ici via PHP -->
+                <!-- Les tableaux + boutons sont générés via charger_disponibilites.php -->
             </div>
         </div>
 
@@ -113,3 +111,4 @@
 </body>
 
 </html>
+
