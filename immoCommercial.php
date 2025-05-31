@@ -41,14 +41,13 @@
             </div>
             <a href="recherche.php">Recherche</a>
             <a href="prendreRDV.php">Rendez-vous</a>
-            <a href="compte.php">Compte</a>
 
             <span style="float:right; padding-right: 20px;">
                 <?php if ($role): ?>
+                    <a href="compte.php" style="margin-left: 10px;">Compte</a>
                     Connecté en tant que <strong><?= ucfirst($role) ?></strong> (<?= $prenom ?> <?= $nom ?>)
-                    <a href="deconnexion.php" style="margin-left: 10px;">Déconnexion</a>
                 <?php else: ?>
-                    <a href="compte.php">Se connecter</a>
+                    <a href="compte.php">Compte</a>
                 <?php endif; ?>
             </span>
 
@@ -66,7 +65,7 @@
             </div>
 
             <div class="col-carrousel-immobilier">
-                <h2>Carrousel de nos Propriétés Résidentielles</h2>
+                <h2>Carrousel de nos Propriétés Commerciales</h2>
                 <div class="carrousel-container">
                     <?php include 'immoCommercial2.php'; ?>
                 </div>
