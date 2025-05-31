@@ -66,7 +66,6 @@
                     <li>Atelier de rénovation énergétique - Mercredi 10h</li>
                     <li>Visite guidée des nouveaux projets immobiliers - Vendredi 14h</li>
                 </ul>
-                <p>Pour plus d'informations, consultez notre <a href="evenements.html">page des événements</a>.</p>
             </div>
 
             <div id="col-image-index">
