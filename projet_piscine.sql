@@ -70,11 +70,11 @@ CREATE TABLE IF NOT EXISTS `agent_immobilier` (
 --
 
 INSERT INTO `agent_immobilier` (`ID`, `Nom`, `Prenom`, `Photo`, `Specialite`, `CV`, `Courriel`, `Telephone`) VALUES
-(1, 'Leclerc', 'Alice', '', 'Immobilier Commercial', '/cv/alice.pdf', 'alice.leclerc@immo.fr', '0601020301'),
-(2, 'Blanc', 'Hugo', '', 'Immobilier Résidentiel\r\n', '/cv/hugo.pdf', 'hugo.blanc@immo.fr', '0601020302'),
-(3, 'Petit', 'Chloé', '', 'Immobilier de Terrains', '/cv/chloe.pdf', 'chloe.petit@immo.fr', '0601020303'),
-(4, 'Moreau', 'Nathan', '', 'Immobilier de Location', '/cv/nathan.pdf', 'nathan.moreau@immo.fr', '0601020304'),
-(5, 'Dubois', 'Emma', '', 'Vente aux Enchères', '/cv/emma.pdf', 'emma.dubois@immo.fr', '0601020305');
+(1, 'Leclerc', 'Alice', '', 'Immobilier Commercial', 'cv/alice.pdf', 'alice.leclerc@immo.fr', '0601020301'),
+(2, 'Blanc', 'Hugo', '', 'Immobilier Résidentiel\r\n', 'cv/hugo.pdf', 'hugo.blanc@immo.fr', '0601020302'),
+(3, 'Petit', 'Chloé', '', 'Immobilier de Terrains', 'cv/chloe.pdf', 'chloe.petit@immo.fr', '0601020303'),
+(4, 'Moreau', 'Nathan', '', 'Immobilier de Location', 'cv/nathan.pdf', 'nathan.moreau@immo.fr', '0601020304'),
+(5, 'Dubois', 'Emma', '', 'Vente aux Enchères', 'cv/emma.pdf', 'emma.dubois@immo.fr', '0601020305');
 
 -- --------------------------------------------------------
 
