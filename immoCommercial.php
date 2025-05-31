@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
     <title>Omnes Immobilier</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -20,8 +20,7 @@
 
         <div id="header">
             <h1>
-                <img id=logo src="C:\wamp64\www\OMNES_IMMO_PISCINE\Projet-Piscine-2025\logo.jpg"
-                    alt="Omnes Immobilier Logo" width="100" height="100">
+                <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
                 Omnes Immobilier
             </h1>
         </div>
