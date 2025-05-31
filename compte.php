@@ -168,9 +168,17 @@
 
     <div id="section">
 
+    <div id="col-gauche-compte">
+
       <?php include 'compte1.php'; ?>
+      
+      </div>
+
+      <div id="col-droite-compte">
 
       <?php include 'compteInformations.php'; ?>
+
+      </div>
 
     </div>
 

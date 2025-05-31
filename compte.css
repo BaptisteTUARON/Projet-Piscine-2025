@@ -104,3 +104,15 @@
     font-weight: bold;
 }
     
+/* Styles pour le layout de la page compte*/
+
+#col-gauche-compte, #col-droite-compte {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}

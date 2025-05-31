@@ -13,16 +13,15 @@ if (isset($_SESSION['utilisateur_role'])) {
     echo "<p>Prénom : $prenom</p>";
     echo "<p>Email : $email</p>";
 
+    $conn = new mysqli("localhost", "root", "", "projet_piscine");
+    if ($conn->connect_error) {
+        die("Erreur de connexion : " . $conn->connect_error);
+    }
+
     if ($role === 'Agent Immobilier') {
         echo "<h3>Planning de la semaine</h3>";
 
-        // Connexion à la BDD
-        $conn = new mysqli("localhost", "root", "", "projet_piscine");
-        if ($conn->connect_error) {
-            die("Erreur de connexion : " . $conn->connect_error);
-        }
-
-        // Récupération de l'ID de l'agent depuis la table agent_immobilier
+        // Récupérer ID de l’agent
         $stmt = $conn->prepare("SELECT ID FROM agent_immobilier WHERE Courriel = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -32,8 +31,9 @@ if (isset($_SESSION['utilisateur_role'])) {
             $agent = $resultID->fetch_assoc();
             $agent_id = $agent['ID'];
 
-            // Récupération des disponibilités de l'agent
-            $sql = "SELECT * FROM disponibilite WHERE agent_id = ? ORDER BY FIELD(jour_semaine, 'Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'), heure_debut";
+            $sql = "SELECT * FROM disponibilite 
+                    WHERE agent_id = ? 
+                    ORDER BY FIELD(jour_semaine, 'Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'), heure_debut";
             $stmt2 = $conn->prepare($sql);
             $stmt2->bind_param("i", $agent_id);
             $stmt2->execute();
@@ -64,10 +64,60 @@ if (isset($_SESSION['utilisateur_role'])) {
         } else {
             echo "<p>Agent introuvable.</p>";
         }
-
-        $stmt->close();
-        $conn->close();
     }
+
+    // ------------------ Client : ses réservations ------------------
+    if ($role === 'client') {
+        echo "<h3>Mes réservations</h3>";
+
+        $stmt = $conn->prepare("SELECT * FROM disponibilite 
+                                WHERE client_email = ? AND est_reserve = 1
+                                ORDER BY FIELD(jour_semaine, 'Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'), heure_debut");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            echo "<form method='post'>";
+            echo "<table border='1'>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Heure début</th>
+                        <th>Heure fin</th>
+                        <th>Annuler</th>
+                    </tr>";
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>{$row['jour_semaine']}</td>
+                        <td>{$row['heure_debut']}</td>
+                        <td>{$row['heure_fin']}</td>
+                        <td>
+                            <button type='submit' name='annuler' value='{$row['id']}'>Annuler</button>
+                        </td>
+                      </tr>";
+            }
+            echo "</table>";
+            echo "</form>";
+        } else {
+            echo "<p>Aucune réservation en cours.</p>";
+        }
+
+        // Traitement annulation
+        if (isset($_POST['annuler'])) {
+            $id_to_cancel = intval($_POST['annuler']);
+            $cancel_sql = "UPDATE disponibilite SET est_reserve = 0, client_email = NULL WHERE id = ? AND client_email = ?";
+            $cancel_stmt = $conn->prepare($cancel_sql);
+            $cancel_stmt->bind_param("is", $id_to_cancel, $email);
+            $cancel_stmt->execute();
+
+            echo "Réservation annulée avec succès";
+            // Rafraîchir la page pour mettre à jour les réservations
+        }
+    }
+
+    $conn->close();
+} else {
+    echo "<p>Aucune information d'utilisateur disponible. Veuillez vous connecter.</p>";
 }
 ?>
 </div>
