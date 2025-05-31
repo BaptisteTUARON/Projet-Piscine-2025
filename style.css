@@ -158,6 +158,15 @@ body {
     margin: 20px;
 }
 
+#btnAcheterBien {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 #col-carrousel-toutParcourir {
     display: flex;
     flex-direction: column;

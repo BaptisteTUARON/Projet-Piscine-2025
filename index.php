@@ -65,8 +65,12 @@
                     <li>Webinaire sur l'investissement locatif rentable – Mardi 18h</li>
                     <li>Atelier de rénovation énergétique - Mercredi 10h</li>
                     <li>Visite guidée des nouveaux projets immobiliers - Vendredi 14h</li>
+                    <br><br>
+                    <btn id="btnAcheterBien" onclick="location.href='acheterBien.php'">Acheter ou Louer un Bien</btn>
                 </ul>
             </div>
+
+           
 
             <div id="col-image-index">
                 <img src="Image_bien/price-map.webp" alt="Image d'illustration" width="400" height="300">
