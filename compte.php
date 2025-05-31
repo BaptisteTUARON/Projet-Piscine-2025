@@ -170,6 +170,8 @@
 
       <?php include 'compte1.php'; ?>
 
+      <?php include 'compteInformations.php'; ?>
+
     </div>
 
     <div id="footer">
