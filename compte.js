@@ -37,21 +37,4 @@ function resetButtons() {
   });
 }
 
-/*document.addEventListener('DOMContentLoaded', function() {
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-      alert('Formulaire soumis ! (Fonctionnalité à implémenter côté serveur)');
-    });
-  });
 
-  document.querySelector('.btn-deconnexion').addEventListener('click', function() {
-    if(confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
-      hideAllForms();
-      resetButtons();
-      currentForm = null;
-      currentButton = null;
-      alert('Déconnexion réussie !');
-    }
-  });
- })*/;
