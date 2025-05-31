@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 31 mai 2025 à 10:49
+-- Généré le : sam. 31 mai 2025 à 13:11
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -208,10 +208,10 @@ CREATE TABLE IF NOT EXISTS `disponibilite` (
 INSERT INTO `disponibilite` (`id`, `agent_id`, `jour_semaine`, `heure_debut`, `heure_fin`, `est_reserve`, `client_email`) VALUES
 (1, 1, 'Lundi', '10:00:00', '12:00:00', 1, 'abc@abc'),
 (2, 1, 'Lundi', '08:00:00', '10:00:00', 1, 'roylwehbe@gmail.Com'),
-(3, 1, 'Mardi', '10:00:00', '12:00:00', 0, NULL),
+(3, 1, 'Mardi', '10:00:00', '12:00:00', 1, 'alice.leclerc@immo.fr'),
 (4, 1, 'Mardi', '08:00:00', '10:00:00', 1, 'louis.dupont@edu.ece.fr'),
 (5, 1, 'Mercredi', '10:00:00', '12:00:00', 0, NULL),
-(6, 1, 'Mercredi', '08:00:00', '10:00:00', 0, NULL),
+(6, 1, 'Mercredi', '08:00:00', '10:00:00', 1, 'baptiste.tuaronditcasaux@edu.ece.fr'),
 (7, 1, 'Jeudi', '10:00:00', '12:00:00', 0, NULL),
 (8, 1, 'Jeudi', '08:00:00', '10:00:00', 0, NULL),
 (9, 1, 'Vendredi', '10:00:00', '12:00:00', 0, NULL),
