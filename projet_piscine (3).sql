@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 30 mai 2025 à 20:18
+-- Généré le : sam. 31 mai 2025 à 10:49
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -59,29 +59,22 @@ CREATE TABLE IF NOT EXISTS `agent_immobilier` (
   `Prenom` varchar(255) NOT NULL,
   `Photo` varchar(255) NOT NULL,
   `Specialite` varchar(255) NOT NULL,
-  `Video` varchar(255) NOT NULL,
   `CV` varchar(255) NOT NULL,
-  `Agenda` text NOT NULL,
   `Courriel` varchar(255) NOT NULL,
-  `Adresse_ligne1` varchar(255) DEFAULT NULL,
-  `Adresse_ligne2` varchar(255) DEFAULT NULL,
-  `Ville` varchar(255) DEFAULT NULL,
-  `Code_Postal` int DEFAULT NULL,
-  `Pays` varchar(255) DEFAULT NULL,
   `Telephone` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `agent_immobilier`
 --
 
-INSERT INTO `agent_immobilier` (`ID`, `Nom`, `Prenom`, `Photo`, `Specialite`, `Video`, `CV`, `Agenda`, `Courriel`, `Adresse_ligne1`, `Adresse_ligne2`, `Ville`, `Code_Postal`, `Pays`, `Telephone`) VALUES
-(1, 'Leclerc', 'Alice', '', 'Immobilier Commercial', '', '/cv/alice.pdf', '', 'alice.leclerc@immo.fr', '15 Rue des Lilas', '', 'Paris', 75011, 'France', '0601020301'),
-(2, 'Blanc', 'Hugo', '', 'Immobilier Résidentiel\r\n', '', '/cv/hugo.pdf', '', 'hugo.blanc@immo.fr', '22 Avenue Victor Hugo', 'Bâtiment B', 'Lyon', 69002, 'France', '0601020302'),
-(3, 'Petit', 'Chloé', '', 'Immobilier de Terrains', '', '/cv/chloe.pdf', '', 'chloe.petit@immo.fr', '10 Boulevard Haussmann', '', 'Marseille', 13008, 'France', '0601020303'),
-(4, 'Moreau', 'Nathan', '', 'Immobilier de Location', '', '/cv/nathan.pdf', '', 'nathan.moreau@immo.fr', '8 Rue de la République', 'Appt 301', 'Toulouse', 31000, 'France', '0601020304'),
-(5, 'Dubois', 'Emma', '', 'Vente aux Enchères', '', '/cv/emma.pdf', '', 'emma.dubois@immo.fr', '5 Place Bellecour', '', 'Lille', 59800, 'France', '0601020305');
+INSERT INTO `agent_immobilier` (`ID`, `Nom`, `Prenom`, `Photo`, `Specialite`, `CV`, `Courriel`, `Telephone`) VALUES
+(1, 'Leclerc', 'Alice', '', 'Immobilier Commercial', '/cv/alice.pdf', 'alice.leclerc@immo.fr', '0601020301'),
+(2, 'Blanc', 'Hugo', '', 'Immobilier Résidentiel\r\n', '/cv/hugo.pdf', 'hugo.blanc@immo.fr', '0601020302'),
+(3, 'Petit', 'Chloé', '', 'Immobilier de Terrains', '/cv/chloe.pdf', 'chloe.petit@immo.fr', '0601020303'),
+(4, 'Moreau', 'Nathan', '', 'Immobilier de Location', '/cv/nathan.pdf', 'nathan.moreau@immo.fr', '0601020304'),
+(5, 'Dubois', 'Emma', '', 'Vente aux Enchères', '/cv/emma.pdf', 'emma.dubois@immo.fr', '0601020305');
 
 -- --------------------------------------------------------
 
@@ -100,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `bien_immobilier` (
   `Superficie` varchar(255) NOT NULL,
   `Prix` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `bien_immobilier`
@@ -216,7 +209,7 @@ INSERT INTO `disponibilite` (`id`, `agent_id`, `jour_semaine`, `heure_debut`, `h
 (1, 1, 'Lundi', '10:00:00', '12:00:00', 1, 'abc@abc'),
 (2, 1, 'Lundi', '08:00:00', '10:00:00', 1, 'roylwehbe@gmail.Com'),
 (3, 1, 'Mardi', '10:00:00', '12:00:00', 0, NULL),
-(4, 1, 'Mardi', '08:00:00', '10:00:00', 0, NULL),
+(4, 1, 'Mardi', '08:00:00', '10:00:00', 1, 'louis.dupont@edu.ece.fr'),
 (5, 1, 'Mercredi', '10:00:00', '12:00:00', 0, NULL),
 (6, 1, 'Mercredi', '08:00:00', '10:00:00', 0, NULL),
 (7, 1, 'Jeudi', '10:00:00', '12:00:00', 0, NULL),
