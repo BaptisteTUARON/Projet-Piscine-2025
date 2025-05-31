@@ -35,7 +35,7 @@ if ($db_found) {
 
 
 } else {
-    echo "Database not found";
+    echo "BDD introuvée";
 }
 
 mysqli_close($db_handle);

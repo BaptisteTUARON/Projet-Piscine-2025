@@ -23,7 +23,7 @@ if ($row['est_reserve']) {
     exit;
 }
 
-// Mise à jour du créneau
+// Mise à jour du créneau 
 $sql = "UPDATE disponibilite SET est_reserve = 1, client_email = '$email' WHERE id = $id";
 if ($conn->query($sql) === TRUE) {
     echo "Réservation confirmée !";

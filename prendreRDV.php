@@ -12,36 +12,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     <script>
-        window.onload = function () {
-            fetch('charger_disponibilites.php')
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById('tables-agents').innerHTML = html;
-                });
-        };
+    // Récupération des infos de session côté PHP et passage en JS
+    const nom = <?= json_encode($nom ?? '') ?>;
+    const prenom = <?= json_encode($prenom ?? '') ?>;
+    const email = <?= json_encode($email ?? ($_SESSION['utilisateur_email'] ?? '')) ?>;
 
-        function reserverCreneau(idDispo) {
-            const nom = prompt("Entrez votre nom :");
-            const prenom = prompt("Entrez votre prénom :");
-            const email = prompt("Entrez votre email :");
+    window.onload = function () {
+        fetch('charger_disponibilites.php')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('tables-agents').innerHTML = html;
+            });
+    };
 
-            if (!nom || !prenom || !email) {
-                alert("Tous les champs sont obligatoires.");
-                return;
-            }
-
-            fetch('reserver_creneau.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `id=${idDispo}&nom=${encodeURIComponent(nom)}&prenom=${encodeURIComponent(prenom)}&email=${encodeURIComponent(email)}`
-            })
-                .then(res => res.text())
-                .then(response => {
-                    alert(response);
-                    location.reload(); // Recharge les créneaux
-                });
+    function reserverCreneau(idDispo) {
+        if (!nom || !prenom || !email) {
+            alert("Vous devez être connecté pour réserver un créneau.");
+            return;
         }
-    </script>
+        if (!confirm('Voulez-vous réserver ce créneau ?')) return;
+
+        fetch('reserver_creneau.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `id=${idDispo}&nom=${encodeURIComponent(nom)}&prenom=${encodeURIComponent(prenom)}&email=${encodeURIComponent(email)}`
+        })
+            .then(res => res.text())
+            .then(response => {
+                alert(response);
+                location.reload(); // Recharge les créneaux
+            });
+    }
+</script>
 </head>
 
 <body>
@@ -57,13 +59,13 @@
         <div id="nav">
             <a href="index.php">Accueil</a>
             <div class="dropdown">
-                <a href="toutParcourir.html">Tout Parcourir</a>
+                <a href="toutParcourir.php">Tout Parcourir</a>
                 <div class="dropdown-content">
-                    <a href="immoResidentiel.html">Immobilier Résidentiel</a>
-                    <a href="immoCommercial.html">Immobilier Commercial</a>
-                    <a href="terrain.html">Terrain</a>
-                    <a href="appartLouer.html">Appartements à louer</a>
-                    <a href="immoEnchere.html">Immobilier en vente par enchère</a>
+                    <a href="immoResidentiel.php">Immobilier Résidentiel</a>
+                    <a href="immoCommercial.php">Immobilier Commercial</a>
+                    <a href="terrain.php">Terrain</a>
+                    <a href="appartLouer.php">Appartements à louer</a>
+                    <a href="immoEnchere.php">Immobilier en vente par enchère</a>
                 </div>
             </div>
             <a href="recherche.php">Recherche</a>
@@ -84,7 +86,7 @@
             style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
             <h1 style="text-align: center;">Prendre un rendez-vous avec un de nos conseillers</h1>
             <div id="tables-agents" style="width: 100%; overflow-x: auto;">
-                <!-- Les tableaux par agent seront générés ici via PHP -->
+                <!-- Les tableaux par agent sont générés ici via PHP -->
             </div>
         </div>
 
