@@ -25,6 +25,15 @@ if ($db_found) {
     while ($data = mysqli_fetch_assoc($result)) {
         if (stripos($data['ID'], $search) !== false || stripos($data['Ville'], $search) !== false) {
 
+            $photo = htmlspecialchars($data['Photo']);
+            $categorie = htmlspecialchars($data['Categorie']);
+            $id = htmlspecialchars($data['ID']);
+            $superficie = htmlspecialchars($data['Superficie']);
+            $prix = htmlspecialchars($data['Prix']);
+            $description = htmlspecialchars($data['Description']);
+            $adresse = htmlspecialchars($data['Adresse']);
+            $ville = htmlspecialchars($data['Ville']);
+
             echo '<div class="bien-toutParcourir">';
             echo "<img src=\"$photo\" id=\"images-biens-scrollables\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
             echo "<p><strong>$categorie - $id</strong></p>";
