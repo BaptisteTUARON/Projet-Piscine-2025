@@ -68,8 +68,6 @@ if (isset($_SESSION['utilisateur_role'])) {
         $stmt->close();
         $conn->close();
     }
-} else {
-    echo "<p>Aucune information d'utilisateur disponible. Veuillez vous connecter.</p>";
 }
 ?>
 </div>
