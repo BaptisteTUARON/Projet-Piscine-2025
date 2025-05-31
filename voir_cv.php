@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "root", "projet_piscine");
+$conn = new mysqli("localhost", "root", "", "projet_piscine");
 if ($conn->connect_error) die("Erreur de connexion à la base de données.");
 
 if (!isset($_GET['id'])) {
