@@ -22,7 +22,7 @@ if ($db_found) {
             echo '<div class="bien-toutParcourir">';
             echo "<img src=\"$photo\" id=\"images-biens-scrollables\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
             echo "<p><strong>$categorie - $id</strong></p>";
-            echo "<p>$superficie m² - $prix</p>";
+            echo "<p>$superficie m² - Prix de départ : $prix</p>";
             echo "<p>$description</p>";
             echo "<p>$adresse $ville</p>";
             echo '</div>';
