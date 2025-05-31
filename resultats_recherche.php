@@ -12,8 +12,8 @@ $search = isset($_POST["search"]) ? $_POST["search"] : "";
 
 if ($db_found) {
 
-    $sql = "SELECT bien_immobilier.ID, bien_immobilier.Ville FROM bien_immobilier";
-    $sql2 = "SELECT agent_immobilier.Nom FROM agent_immobilier";
+    $sql = "SELECT * FROM bien_immobilier";
+    $sql2 = "SELECT agent_immobilier.Nom, Specialite FROM agent_immobilier";
     
     $result = mysqli_query($db_handle, $sql);
     $result2 = mysqli_query($db_handle, $sql2);
@@ -25,19 +25,48 @@ if ($db_found) {
     while ($data = mysqli_fetch_assoc($result)) {
         if (stripos($data['ID'], $search) !== false || stripos($data['Ville'], $search) !== false) {
 
-            echo "<div style='border:1px solid #ccc; padding:10px; margin-bottom:10px;'>";
-            echo "<p><strong>ID :</strong> " . htmlspecialchars($data['ID']) . "</p>";
-            echo "<p><strong>Ville :</strong> " . htmlspecialchars($data['Ville']) . "</p>";
-            echo "</div>";
+            echo '<div class="bien-toutParcourir">';
+            echo "<img src=\"$photo\" id=\"images-biens-scrollables\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
+            echo "<p><strong>$categorie - $id</strong></p>";
+            echo "<p>$superficie m² - $prix</p>";
+            echo "<p>$description</p>";
+            echo "<p>$adresse $ville</p>";
+            echo '</div>';
             $found = true;
         }
     }
 
     while ($data2 = mysqli_fetch_assoc($result2)) {
-
         if (stripos($data2['Nom'], $search) !== false) {
+            $nom = htmlspecialchars($data2['Nom']);
+            $specialite = htmlspecialchars($data2['Specialite']);
+
             echo "<div style='border:1px solid #99d; padding:10px; margin-bottom:10px;'>";
-            echo "<p><strong>Agent immobilier trouvé :</strong> " . htmlspecialchars($data2['Nom']) . "</p>";
+            echo "<p><strong>Agent immobilier trouvé :</strong> $nom</p>";
+            echo "<p><strong>Spécialité :</strong> $specialite</p>";
+
+            $sql_biens = "SELECT * FROM bien_immobilier WHERE Categorie = '" . mysqli_real_escape_string($db_handle, $data2['Specialite']) . "'";
+            $result_biens = mysqli_query($db_handle, $sql_biens);
+
+            while ($bien = mysqli_fetch_assoc($result_biens)) {
+                $photo = htmlspecialchars($bien['Photo']);
+                $categorie = htmlspecialchars($bien['Categorie']);
+                $id = htmlspecialchars($bien['ID']);
+                $superficie = htmlspecialchars($bien['Superficie']);
+                $prix = htmlspecialchars($bien['Prix']);
+                $description = htmlspecialchars($bien['Description']);
+                $adresse = htmlspecialchars($bien['Adresse']);
+                $ville = htmlspecialchars($bien['Ville']);
+
+                echo '<div class="bien-toutParcourir">';
+                echo "<img src=\"$photo\" id=\"images-biens-scrollables\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
+                echo "<p><strong>$categorie - $id</strong></p>";
+                echo "<p>$superficie m² - $prix</p>";
+                echo "<p>$description</p>";
+                echo "<p>$adresse $ville</p>";
+                echo '</div>';
+            }
+
             echo "</div>";
             $found = true;
         }
