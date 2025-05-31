@@ -1,5 +1,6 @@
 <?php
 
+
 $database = "projet_piscine";
 $db_handle = mysqli_connect('localhost', 'root', '');
 $db_found  = mysqli_select_db($db_handle, $database);
@@ -20,7 +21,7 @@ if ($db_found) {
             $ville = isset($row['Ville']) ? $row['Ville'] : '';
 
             echo '<div class="bien-toutParcourir">';
-            echo "<img src=\"$photo\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
+            echo "<img src=\"$photo\" id=\"images-biens-scrollables\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
             echo "<p><strong>$categorie - $id</strong></p>";
             echo "<p>$superficie m² - $prix</p>";
             echo "<p>$description</p>";

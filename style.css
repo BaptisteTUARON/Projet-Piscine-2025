@@ -167,6 +167,11 @@ body {
 
 }
 
+#images-biens-scrollables {
+    float: right;
+ 
+}
+
 /*Colonne de droite dans toutParcourir.html : les images dans la colonne de droite : deux par ligne */
 #col-images-toutParcourir {
     display: flex;
@@ -184,6 +189,13 @@ body {
 }
 
 .bien-toutParcourir {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 850px;
+}
+
+.bien-toutParcourir2 {
     border: 1px solid black;
     padding: 10px;
     margin: 10px;

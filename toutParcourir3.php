@@ -21,7 +21,7 @@ if ($db_found) {
             $adresse = isset($row['Adresse']) ? $row['Adresse'] : '';
             $ville = isset($row['Ville']) ? $row['Ville'] : '';
 
-            echo '<div class="bien-toutParcourir">';
+            echo '<div class="bien-toutParcourir2">';
             echo "<img src=\"$photo\" alt=\"Photo bien\" width=\"300\" height=\"200\">";
             echo "<p><strong>$categorie - $id</strong></p>";
             echo "<p>$superficie m² - $prix</p>";
