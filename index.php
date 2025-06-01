@@ -66,7 +66,7 @@
                     <li>Atelier de rénovation énergétique - Mercredi 10h</li>
                     <li>Visite guidée des nouveaux projets immobiliers - Vendredi 14h</li>
                     <br><br>
-                    <btn id="btnAcheterBien" onclick="location.href='acheterBien.php'">Acheter ou Louer un Bien</btn>
+                    <btn id="btnAcheterBien">Acheter ou Louer un Bien</btn>
                 </ul>
             </div>
 
