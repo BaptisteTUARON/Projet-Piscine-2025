@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 31 mai 2025 à 13:11
+-- Généré le : dim. 01 juin 2025 à 20:58
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -156,11 +156,6 @@ CREATE TABLE IF NOT EXISTS `client` (
   `Pays` varchar(255) NOT NULL,
   `Telephone` varchar(255) NOT NULL,
   `Courriel` varchar(255) NOT NULL,
-  `Type_Carte` varchar(255) NOT NULL,
-  `Numero_Carte` varchar(255) NOT NULL,
-  `Nom_Carte` varchar(255) NOT NULL,
-  `Date_Expiration` varchar(255) NOT NULL,
-  `Code_Securite` int NOT NULL,
   `Motdepasse` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -168,19 +163,19 @@ CREATE TABLE IF NOT EXISTS `client` (
 -- Déchargement des données de la table `client`
 --
 
-INSERT INTO `client` (`Nom`, `Prenom`, `Adresse_ligne1`, `Adresse_ligne2`, `Code_Postal`, `Pays`, `Telephone`, `Courriel`, `Type_Carte`, `Numero_Carte`, `Nom_Carte`, `Date_Expiration`, `Code_Securite`, `Motdepasse`) VALUES
-('Dupont', 'Louis', '10 rue sextius-michel', '10 rue sextius-michel', 75015, 'France', '0601020304', 'louis.dupont@edu.ece.fr', 'visa', '1234', 'Dupont', '09/25', 123, 'louis'),
-('Martin', 'Claire', '12 Avenue de la République', '', 75011, 'France', '0600000001', 'claire.martin@exemple.com', 'visa', '1111', 'Martin', '12/26', 111, 'claire123'),
-('Bernard', 'Julien', '24 Rue du Faubourg', 'Appartement 2B', 69003, 'France', '0600000002', 'julien.bernard@exemple.com', 'mastercard', '2222', 'Bernard', '11/25', 222, 'julien123'),
-('Robert', 'Élodie', '56 Boulevard Voltaire', '', 13001, 'France', '0600000003', 'elodie.robert@exemple.com', 'visa', '3333', 'Robert', '10/26', 333, 'elodie123'),
-('Richard', 'Luc', '18 Rue Lafayette', '', 31000, 'France', '0600000004', 'luc.richard@exemple.com', 'mastercard', '4444', 'Richard', '09/25', 444, 'luc123'),
-('Durand', 'Nina', '8 Rue de la République', '', 6000, 'France', '0600000005', 'nina.durand@exemple.com', 'visa', '5555', 'Durand', '01/27', 555, 'nina123'),
-('Dubois', 'Thomas', '14 Avenue Jean Jaurès', '', 44000, 'France', '0600000006', 'thomas.dubois@exemple.com', 'mastercard', '6666', 'Dubois', '03/26', 666, 'thomas123'),
-('Moreau', 'Emma', '20 Rue Victor Hugo', '', 67000, 'France', '0600000007', 'emma.moreau@exemple.com', 'visa', '7777', 'Moreau', '05/27', 777, 'emma123'),
-('Simon', 'Leo', '5 Rue des Lilas', '', 33000, 'France', '0600000008', 'leo.simon@exemple.com', 'mastercard', '8888', 'Simon', '06/26', 888, 'leo123'),
-('Laurent', 'Camille', '31 Rue Nationale', '', 59000, 'France', '0600000009', 'camille.laurent@exemple.com', 'visa', '9999', 'Laurent', '07/25', 999, 'camille123'),
-('Garcia', 'Hugo', '7 Rue des Fleurs', '', 35000, 'France', '0600000010', 'hugo.garcia@exemple.com', 'mastercard', '0000', 'Garcia', '08/27', 101, 'hugo123'),
-('abc', 'abc', 'abc', 'anc', 0, '', '06243564', 'abc@abc', 'aucun', 'aucun', 'abc', '00/00', 0, 'abcdef');
+INSERT INTO `client` (`Nom`, `Prenom`, `Adresse_ligne1`, `Adresse_ligne2`, `Code_Postal`, `Pays`, `Telephone`, `Courriel`, `Motdepasse`) VALUES
+('Dupont', 'Louis', '10 rue sextius-michel', '10 rue sextius-michel', 75015, 'France', '0601020304', 'louis.dupont@edu.ece.fr', 'louis'),
+('Martin', 'Claire', '12 Avenue de la République', '', 75011, 'France', '0600000001', 'claire.martin@exemple.com', 'claire123'),
+('Bernard', 'Julien', '24 Rue du Faubourg', 'Appartement 2B', 69003, 'France', '0600000002', 'julien.bernard@exemple.com', 'julien123'),
+('Robert', 'Élodie', '56 Boulevard Voltaire', '', 13001, 'France', '0600000003', 'elodie.robert@exemple.com', 'elodie123'),
+('Richard', 'Luc', '18 Rue Lafayette', '', 31000, 'France', '0600000004', 'luc.richard@exemple.com', 'luc123'),
+('Durand', 'Nina', '8 Rue de la République', '', 6000, 'France', '0600000005', 'nina.durand@exemple.com', 'nina123'),
+('Dubois', 'Thomas', '14 Avenue Jean Jaurès', '', 44000, 'France', '0600000006', 'thomas.dubois@exemple.com', 'thomas123'),
+('Moreau', 'Emma', '20 Rue Victor Hugo', '', 67000, 'France', '0600000007', 'emma.moreau@exemple.com', 'emma123'),
+('Simon', 'Leo', '5 Rue des Lilas', '', 33000, 'France', '0600000008', 'leo.simon@exemple.com', 'leo123'),
+('Laurent', 'Camille', '31 Rue Nationale', '', 59000, 'France', '0600000009', 'camille.laurent@exemple.com', 'camille123'),
+('Garcia', 'Hugo', '7 Rue des Fleurs', '', 35000, 'France', '0600000010', 'hugo.garcia@exemple.com', 'hugo123'),
+('abc', 'abc', 'abc', 'anc', 0, '', '06243564', 'abc@abc', 'abcdef');
 
 -- --------------------------------------------------------
 
@@ -209,7 +204,7 @@ INSERT INTO `disponibilite` (`id`, `agent_id`, `jour_semaine`, `heure_debut`, `h
 (1, 1, 'Lundi', '10:00:00', '12:00:00', 1, 'abc@abc'),
 (2, 1, 'Lundi', '08:00:00', '10:00:00', 1, 'roylwehbe@gmail.Com'),
 (3, 1, 'Mardi', '10:00:00', '12:00:00', 1, 'alice.leclerc@immo.fr'),
-(4, 1, 'Mardi', '08:00:00', '10:00:00', 1, 'louis.dupont@edu.ece.fr'),
+(4, 1, 'Mardi', '08:00:00', '10:00:00', 0, NULL),
 (5, 1, 'Mercredi', '10:00:00', '12:00:00', 0, NULL),
 (6, 1, 'Mercredi', '08:00:00', '10:00:00', 1, 'baptiste.tuaronditcasaux@edu.ece.fr'),
 (7, 1, 'Jeudi', '10:00:00', '12:00:00', 0, NULL),
