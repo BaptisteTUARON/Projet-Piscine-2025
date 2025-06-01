@@ -11,8 +11,6 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
-    // Démarrer la session et stocker les informations de l'administrateur
-
     session_start();
         $_SESSION['utilisateur_role'] = 'Agent Immobilier'; 
         $_SESSION['utilisateur_nom'] = $nom;

@@ -103,8 +103,6 @@
     cursor: pointer;
     font-weight: bold;
 }
-    
-/* Styles pour le layout de la page compte*/
 
 #col-gauche-compte, #col-droite-compte {
     display: flex;

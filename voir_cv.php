@@ -13,12 +13,11 @@ $res = $conn->query($sql);
 
 if ($res && $res->num_rows > 0) {
     $row = $res->fetch_assoc();
-    $cvPath = $row['CV']; // exemple : cv/alice.pdf
+    $cvPath = $row['CV'];
 
     if ($cvPath && file_exists($cvPath)) {
         $extension = pathinfo($cvPath, PATHINFO_EXTENSION);
 
-        // Rediriger vers le PDF
         if ($extension === 'pdf') {
             header("Location: $cvPath");
             exit;

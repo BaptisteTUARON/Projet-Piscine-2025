@@ -16,7 +16,6 @@
 <body>
     <div id="wrapper">
 
-        <!-- En-tête -->
         <div id="header">
             <h1>
                 <img id="logo" src="logo.jpg" alt="Omnes Immobilier Logo" width="100" height="100">
@@ -24,7 +23,6 @@
             </h1>
         </div>
 
-        <!-- Navigation -->
         <div id="nav">
             <a href="index.php">Accueil</a>
             <div class="dropdown">
@@ -73,7 +71,6 @@
             </div>
         </div>
 
-        <!-- Pied de page -->
         <div id="footer">
             <div class="footer-content">
                 <div class="footer-left">

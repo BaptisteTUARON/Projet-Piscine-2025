@@ -56,7 +56,7 @@
         <br>
 
         <div id="section">
-            <!-- Colonne gauche : liste des biens -->
+            
             <div class="col-gauche-immo">
                 <div class="appartement-immo">
                     <div class="infos">

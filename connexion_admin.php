@@ -11,15 +11,12 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
-    // Démarrer la session et stocker les informations de l'administrateur
-
     session_start();
         $_SESSION['utilisateur_role'] = 'admin'; 
         $_SESSION['utilisateur_nom'] = $nom;
         $_SESSION['utilisateur_prenom'] = $prenom;
         $_SESSION['utilisateur_email'] = $email;
 
-        //Rediriger vers index.php
         header("Location: index.php");
   
 } else {

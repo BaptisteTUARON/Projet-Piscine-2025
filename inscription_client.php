@@ -17,7 +17,6 @@ $adresse1 = $_POST['adresse1'];
 $adresse2 = $_POST['adresse2'];
 $password = $_POST['password'];
 
-// Valeurs par défaut pour les champs carte
 $type_carte = "aucun";
 $numero_carte = "aucun";
 $nom_carte = "aucun";

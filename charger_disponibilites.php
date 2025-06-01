@@ -24,7 +24,7 @@ while ($agent = $agents->fetch_assoc()) {
 
     foreach ($plages as $debut) {
         $timestamp_debut = strtotime($debut);
-        $fin = date("H:i", $timestamp_debut + 7200); // +2h
+        $fin = date("H:i", $timestamp_debut + 7200);
 
         echo "<tr><th>$debut - $fin</th>";
         foreach ($jours as $jour) {
@@ -50,7 +50,6 @@ while ($agent = $agents->fetch_assoc()) {
     }
     echo "</table>";
 
-    // Boutons CV et Message
     echo "<div style='text-align: center; margin-top: 10px;'>";
     echo "<form action='voir_cv.php' method='GET' style='display: inline-block; margin-right: 10px;'>";
     echo "<input type='hidden' name='id' value='$idAgent'>";

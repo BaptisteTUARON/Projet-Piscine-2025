@@ -84,7 +84,6 @@
         <div id="section" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
             <h1 style="text-align: center;">Prendre un rendez-vous avec un de nos conseillers</h1>
             <div id="tables-agents" style="width: 100%; overflow-x: auto;">
-                <!-- Les tableaux + boutons sont générés via charger_disponibilites.php -->
             </div>
         </div>
 

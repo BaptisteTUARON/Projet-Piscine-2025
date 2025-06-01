@@ -108,7 +108,6 @@
 
         echo "<h3>Planning de la semaine</h3>";
 
-        // Récupérer ID de l’agent
         $stmt = $conn->prepare("SELECT ID FROM agent_immobilier WHERE Courriel = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -190,7 +189,6 @@
             echo "<p>Aucune réservation en cours.</p>";
         }
 
-        // Traitement annulation
         if (isset($_POST['annuler'])) {
             $id_to_cancel = intval($_POST['annuler']);
             $cancel_sql = "UPDATE disponibilite SET est_reserve = 0, client_email = NULL WHERE id = ? AND client_email = ?";
@@ -199,7 +197,6 @@
             $cancel_stmt->execute();
 
             echo "Réservation annulée avec succès";
-            // Rafraîchir la page pour mettre à jour les réservations
         }
     ?>
 
